@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" >
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" type="image/png" href="favicon/favicon.ico" sizes="16x16">	
+	<title></title>
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</head>
+
+<body>
+
+	<div class="wrapper">
+
+	<!-- Header -->
+		
+	<header>
+		<div class="header_site">
+			<div class="top_header">
+				<div class="row">
+					<div class="top_header_templ">
+						<div class="left">
+							<nav>
+								<ul class="top_nav">
+									<li><a href="#">Услуги</a></li>
+									<li><a href="#">Цены</a></li>
+									<li><a href="#">Акции</a></li>
+									<li><a href="#">О компании</a></li>
+									<li><a href="#">Оборудование</a></li>
+									<li><a href="#">Заказчики</a></li>
+									<li><a href="#">Оплата и доставка</a></li>
+									<li><a href="#">Контакты</a></li>
+								</ul>
+							</nav>
+						</div>
+						<div class="right">
+							<form>
+								<div class="search_form_wrapp">
+									<div>
+										<input class="search_input" type="text" placeholder="Поиск по сайту" />
+									</div>
+									<div>
+										<button type="submit" class="search_btn">
+											<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M6.99689 0C3.13351 0 0.000976562 3.13253 0.000976562 6.99594C0.000976562 10.8593 3.13351 13.9919 6.99692 13.9919C8.48255 13.9919 9.86031 13.5285 10.9928 12.7392L10.9937 12.7384L16.1822 17.9269C16.2784 18.0232 16.4315 18.0256 16.5303 17.9269L17.9287 16.5285C18.025 16.4322 18.02 16.2726 17.9279 16.1804L12.7401 10.9927C13.5294 9.85933 13.9928 8.48154 13.9928 6.99594C13.9928 3.13253 10.8603 0 6.99689 0ZM6.99689 12.3458C4.04213 12.3458 1.64706 9.9507 1.64706 6.99594C1.64706 4.04118 4.04216 1.64611 6.99689 1.64611C9.95162 1.64611 12.3467 4.04118 12.3467 6.99594C12.3467 9.9507 9.95165 12.3458 6.99689 12.3458Z" fill="white"/>
+											</svg>
+										</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main_header">
+				<div class="row">
+					<div class="main_header_templ">
+						<div class="col">
+							<a href="#" class="logo">
+								<svg width="137" height="84" viewBox="0 0 137 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M22.1949 6.59418L15.6228 23.5553L24.7755 9.18636L22.1949 6.59418Z" fill="#4BBBE5"/>
+									<path d="M29.3881 4.99048L18.4473 25.8929L32.365 9.20085L29.3881 4.99048Z" fill="#6F7BBA"/>
+									<path d="M36.3708 3.59515L21.0613 28.4388L39.7458 9.42644L36.3708 3.59515Z" fill="#873D8D"/>
+									<path d="M42.8048 1.6499L23.1274 30.4357L46.5769 9.09847L42.8048 1.6499Z" fill="#B2227F"/>
+									<path d="M53.5416 0.825378L25.1294 34.1378L57.2604 10.636L53.5416 0.825378Z" fill="#CB2452"/>
+									<path d="M64.2757 0L27.1333 37.8408L67.9422 12.1699L64.2757 0Z" fill="#E64F28"/>
+									<path d="M77.4271 1.85651L28.5549 40.703L79.9608 16.6159L77.4271 1.85651Z" fill="#EE761C"/>
+									<path d="M87.9645 11.2286L30.4153 43.3323L88.0917 27.0453L87.9645 11.2286Z" fill="#F59D0E"/>
+									<path d="M100.94 23.3025L31.7168 45.1444L97.5801 40.4058L100.94 23.3025Z" fill="#FBC707"/>
+									<path d="M115.791 37.2637L34.8967 48.8393L108.947 55.6536L115.791 37.2637Z" fill="#F7E808"/>
+									<path d="M20.201 77.8824C19.6955 79.0974 18.9445 80.1683 17.9516 81.0988C16.9596 82.0293 15.8241 82.7424 14.5532 83.2443C13.2877 83.7472 11.9888 83.9991 10.6575 83.9991C9.20603 83.9991 7.83403 83.7155 6.53965 83.151C5.24527 82.5875 4.10435 81.801 3.11777 80.7863C2.1339 79.7715 1.36395 78.6081 0.822373 77.2907C0.274474 75.9779 0.000976562 74.5953 0.000976562 73.1574C0.000976562 71.2484 0.478469 69.4707 1.43436 67.8317C2.38934 66.189 3.67921 64.8852 5.30214 63.9167C6.92056 62.949 8.66896 62.4652 10.5428 62.4652C11.9058 62.4652 13.2426 62.7216 14.5496 63.2335C15.8566 63.7454 17.0111 64.4766 18.0229 65.4307C19.0339 66.3847 19.7993 67.4928 20.3147 68.7504H15.974C15.3286 67.9631 14.5271 67.3397 13.5567 66.874C12.5927 66.4128 11.5953 66.1809 10.5708 66.1809C9.35496 66.1809 8.22396 66.5016 7.18503 67.1485C6.147 67.7954 5.32471 68.6661 4.72265 69.7652C4.11518 70.8678 3.8128 72.0457 3.8128 73.3024C3.8128 74.4947 4.1233 75.63 4.74522 76.7154C5.36171 77.7954 6.19665 78.6607 7.2437 79.313C8.28715 79.9599 9.40551 80.2852 10.597 80.2852C12.5494 80.2852 14.2752 79.4852 15.7718 77.8833H20.201V77.8824ZM43.1279 73.2743C43.1279 75.2195 42.6459 77.0126 41.6773 78.6607C40.7124 80.3088 39.4045 81.6071 37.7536 82.5657C36.1072 83.5198 34.3254 84 32.4154 84C30.5055 84 28.7246 83.5198 27.0782 82.5657C25.4272 81.6062 24.1193 80.3088 23.1544 78.6607C22.1859 77.0126 21.7039 75.2204 21.7039 73.2743C21.7039 71.3145 22.1805 69.5033 23.1364 67.8462C24.0923 66.1845 25.3948 64.8762 27.0412 63.913C28.693 62.949 30.482 62.4652 32.4163 62.4652C34.3507 62.4652 36.1397 62.949 37.787 63.913C39.4325 64.8762 40.7359 66.1845 41.6918 67.8462C42.6522 69.5033 43.1288 71.3145 43.1288 73.2743H43.1279ZM25.5157 73.1954C25.5157 74.4385 25.8271 75.6119 26.4517 76.7009C27.0782 77.7954 27.923 78.6652 28.9836 79.313C30.0505 79.9599 31.1915 80.2852 32.4154 80.2852C33.6403 80.2852 34.7803 79.9599 35.8472 79.313C36.9087 78.6652 37.7536 77.7954 38.3791 76.7009C39.0056 75.6119 39.3161 74.4385 39.3161 73.1954C39.3161 71.9297 39.0101 70.7519 38.3936 69.6764C37.7771 68.5964 36.9376 67.7447 35.8806 67.1159C34.8182 66.4925 33.6683 66.1809 32.4163 66.1809C31.1689 66.1809 30.0144 66.4925 28.952 67.1159C27.895 67.7447 27.0547 68.5964 26.4391 69.6764C25.8217 70.7519 25.5166 71.9297 25.5166 73.1954H25.5157ZM46.1382 83.4971V62.8575H50.9754H51.7038C52.4079 62.8575 53.0162 62.8811 53.5262 62.9218C54.0317 62.9644 54.5462 63.0668 55.0616 63.2299C55.5806 63.3875 56.0716 63.6304 56.5401 63.9466C57.097 64.3235 57.5836 64.7892 57.9961 65.3383C58.414 65.8873 58.729 66.4925 58.9474 67.1494C59.165 67.8054 59.2715 68.4713 59.2715 69.1463C59.2715 70.1801 59.063 71.1623 58.6405 72.0846C58.2235 73.0061 57.616 73.7871 56.8181 74.4213C56.3587 74.7928 55.8532 75.0673 55.3017 75.2494C54.7448 75.4306 54.1797 75.5475 53.5957 75.5983C53.0153 75.6499 52.3338 75.6771 51.5594 75.6771H50.6974H49.95V83.4971H46.1382ZM50.6414 71.9623C51.9944 71.9623 52.9774 71.888 53.5903 71.744C54.1563 71.5573 54.6103 71.2366 54.9497 70.7799C55.2882 70.3188 55.4597 69.7933 55.4597 69.1971C55.4597 68.5873 55.2737 68.0663 54.9072 67.6242C54.5408 67.1875 54.0687 66.8885 53.4838 66.7345C52.9278 66.6275 51.9818 66.5723 50.6414 66.5723H49.95V71.9623H50.6414ZM66.6731 75.8719L59.9114 62.8575H64.1132L68.5885 72.3528L73.0727 62.8575H77.2429L70.4849 75.8719V83.4971H66.6731V75.8719ZM81.0628 66.5714H77.279V62.8566H88.7145V66.5714H84.8738V83.4962H81.0619V66.5714H81.0628ZM90.6632 62.8566H94.4751V71.7938L100.875 62.8566H105.438L97.6749 72.9943L105.438 83.4962H100.875L94.4751 74.4467V83.4962H90.6632V62.8566ZM107.919 62.8566H111.731V71.7938L118.129 62.8566H122.693L114.931 72.9943L122.693 83.4962H118.129L111.731 74.4467V83.4962H107.919V62.8566ZM127.651 77.6867C127.651 78.4822 127.929 79.1164 128.482 79.5812C129.038 80.0515 129.715 80.2834 130.517 80.2834C130.99 80.2834 131.432 80.172 131.849 79.9436C132.261 79.7208 132.591 79.4091 132.827 79.0131C133.068 78.6127 133.189 78.1714 133.189 77.6867C133.189 76.6765 132.878 75.9362 132.257 75.466C131.63 74.9957 130.749 74.5717 129.598 74.1948C128.723 73.9012 128.026 73.6313 127.512 73.3803C126.997 73.1329 126.505 72.7696 126.042 72.2948C125.541 71.7829 125.147 71.1732 124.86 70.461C124.567 69.7489 124.424 69.0367 124.424 68.3282C124.424 67.2301 124.697 66.2289 125.245 65.3355C125.791 64.4367 126.534 63.7346 127.465 63.2272C128.392 62.7198 129.403 62.4634 130.489 62.4634C131.268 62.4634 132.024 62.6165 132.756 62.92C133.489 63.2281 134.134 63.6467 134.691 64.1767C135.247 64.7076 135.687 65.3355 136.016 66.0622C136.342 66.7834 136.504 67.5417 136.504 68.3336H132.576C132.548 67.7003 132.312 67.1839 131.862 66.7834C131.408 66.3784 130.879 66.1781 130.267 66.1781C129.655 66.1781 129.163 66.3874 128.793 66.8015C128.422 67.2156 128.235 67.7374 128.235 68.3608C128.235 69.0313 128.468 69.5522 128.936 69.9156C129.4 70.2825 130.031 70.5996 130.824 70.8751C131.825 71.2103 132.614 71.503 133.193 71.7503C133.768 71.9967 134.315 72.3365 134.835 72.7687C136.278 73.9194 137.001 75.4832 137.001 77.4611C137.001 78.667 136.699 79.7742 136.095 80.7709C135.493 81.7711 134.682 82.5585 133.657 83.1356C132.631 83.7082 131.524 83.9973 130.322 83.9973C129.162 83.9973 128.068 83.7173 127.048 83.1637C126.024 82.6047 125.203 81.8418 124.591 80.8778C123.979 79.9137 123.668 78.8482 123.668 77.684H127.651V77.6867Z" fill="#2B2A29"/>
+								</svg>
+							</a>
+						</div>
+						<div class="col">
+							<div class="contact_thumb">
+								<div>
+									<svg width="29" height="35" viewBox="0 0 29 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M12.9557 0.0636C7.93184 0.686629 3.72339 3.6069 1.49828 8.01425C-1.16153 13.2828 -0.20536 20.1033 3.77378 24.245C4.51137 25.0128 4.5557 25.0407 5.03474 25.0407C5.46126 25.0407 5.57512 24.9918 5.84154 24.6942C6.07117 24.4377 6.15176 24.241 6.15176 23.9366C6.15176 23.5816 6.04916 23.4044 5.40066 22.6388C3.24201 20.0902 2.29105 17.5969 2.29105 14.4853C2.29105 10.123 4.47214 6.29601 8.27023 3.9941C11.8652 1.81525 16.6718 1.7359 20.3444 3.79477C23.9687 5.8267 26.1995 9.18329 26.6735 13.3184C26.9197 15.4668 26.4542 17.9009 25.3948 20.0031C24.5909 21.5984 24.0934 22.1576 18.4098 27.8553L12.8508 33.4279L13.6439 34.214L14.4368 35L15.1049 34.3569C17.0777 32.4577 25.6554 23.7965 26.0121 23.3433C28.8759 19.7064 29.7672 14.5437 28.3107 10.0298C27.6265 7.90912 26.5829 6.16277 25.0281 4.53661C22.8683 2.27756 20.2775 0.855832 17.2624 0.275237C15.9255 0.0177719 14.0633 -0.0736722 12.9557 0.0636ZM10.7781 9.47417C10.4867 10.2174 9.67078 12.2815 8.96487 14.061L7.68147 17.2966L7.12918 17.3286L6.577 17.3607V18.0447V18.7287H9.3411H12.1052V18.0391V17.3496H11.6914H11.2776L11.6797 16.2092C11.9009 15.582 12.123 15.0899 12.1732 15.1158C12.2235 15.1417 12.7431 15.947 13.3278 16.9053C13.9125 17.8637 14.4356 18.6475 14.4901 18.6471C14.5447 18.6466 15.0887 17.8272 15.699 16.8262C16.3093 15.8252 16.8325 15.0299 16.8616 15.0588C16.8906 15.0879 17.0937 15.6151 17.3127 16.2306L17.7109 17.3496H17.3H16.8892V18.0391V18.7287H19.6533H22.4174V18.0391V17.3496L21.8593 17.348L21.3012 17.3465L21.0476 16.685C20.195 14.4609 17.7132 8.26641 17.6485 8.20053C17.6059 8.15714 16.8839 9.32183 16.0442 10.7888C14.7009 13.1353 14.501 13.4335 14.3811 13.2701C14.3063 13.1678 13.608 11.9677 12.8296 10.603C12.0511 9.23845 11.3903 8.12213 11.361 8.12234C11.3318 8.12256 11.0694 8.73084 10.7781 9.47417Z" fill="#BDBDBD"/>
+									</svg>
+								</div>
+								<div>
+									<h3>м. Полянка</h3>
+									<p>Москва, Большая Якиманка, 27</p>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="contacts_lists_templ">
+								<div>
+									<div class="contact_thumb_2">
+										<div>
+											<img src="img/clock.svg" alt="" />
+										</div>
+										<div>
+											<p>График работы: с 8:00 до 22:00</p>
+										</div>
+									</div>
+									<div class="contact_thumb_2">
+										<div>
+											<img src="img/checked.svg" alt="" />
+										</div>
+										<div>
+											<p>Прием заказов: круглосуточно по почте</p>
+										</div>
+									</div>
+								</div>
+								<div>
+									<div class="contact_thumb_3">
+										<div>
+											<img src="img/whatsup.svg" alt="" />
+										</div>
+										<div>
+											<a href="https://api.whatsapp.com/send?phone=79262636831" class="tel_link">+7-926-263-68-31</a>
+										</div>
+									</div>
+									<div class="contact_thumb_3">
+										<div>
+											<img src="img/tel.svg" alt="" />
+										</div>
+										<div>
+											<a href="tel:+79262636831" class="tel_link">+7-926-263-68-31</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="contacts_right">
+								<div>
+									<div>
+										<div class="contact_thumb_2">
+											<div>
+												<img src="img/mail.svg" alt="" />
+											</div>
+											<div>
+												<a class="mail_link" href="mail:copytkks@yandex.ru">copytkks@yandex.ru</a>
+											</div>
+										</div>
+									</div>
+									<div>
+										<ul class="orange_links">
+											<li><a href="#">Напишите нам </a></li>
+											<li><a href="#">Закажите звонок</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main_nav_wrapp">
+				<div class="row">
+					<div class="main_nav_templ">
+						<div>
+							<div class="dropdown_menu_wrapp">
+								<button class="respmenubtn">
+									<span></span>
+									<span></span>
+									<span></span>
+								</button>
+								<div class="dropdown_menu_box">
+									<div class="tree_cols">
+										<div>
+											<ul class="main_nav_2">
+												<li><a href="#">Бейджи</a></li>
+												<li><a href="#">Бирки</a></li>
+												<li><a href="#">Бланки</a></li>
+												<li><a href="#">Блокноты</a></li>
+												<li><a href="#">Браслеты</a></li>
+												<li><a href="#">Брошюры</a></li>
+												<li><a href="#">Буклеты</a></li>
+												<li><a href="#">Бумажные стаканы</a></li>
+												<li><a href="#">Визитки</a></li>
+												<li><a href="#">Газеты</a></li>
+												<li><a href="#">Годовые отчеты</a></li>
+												<li><a href="#">Голограммы</a></li>
+											</ul>
+										</div>
+										<div>
+											<ul class="main_nav_2">
+												<li><a href="#">Журналы</a></li>
+												<li><a href="#">Календари</a></li>
+												<li><a href="#">Каталоги</a></li>
+												<li><a href="#" class="active">Книги</a></li>
+												<li><a href="#">Конверты</a></li>
+												<li><a href="#">Кубарики</a></li>
+												<li><a href="#">Листовки</a></li>
+												<li><a href="#">Лифлеты</a></li>
+												<li><a href="#">Магнитные карты</a></li>
+												<li><a href="#">Магниты</a></li>
+												<li><a href="#">Меню</a></li>
+												<li><a href="#">Наклейки</a></li>
+											</ul>
+										</div>
+										<div>
+											<ul class="main_nav_2">
+												<li><a href="#">Открытки</a></li>
+												<li><a href="#">Папки</a></li>
+												<li><a href="#">Печать биографий</a></li>
+												<li><a href="#">Пластиковые карты</a></li>
+												<li><a href="#">Презентации</a></li>
+												<li><a href="#">Приглашения</a></li>
+												<li><a href="#">Сертификаты</a></li>
+												<li><a href="#">Скотч</a></li>
+												<li><a href="#">Удостоверения</a></li>
+												<li><a href="#">Флаеры</a></li>
+												<li><a href="#">Чековая лента</a></li>
+												<li><a href="#">Этикетки</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div>
+							<nav>
+								<ul class="main_nav">
+									<li><a href="#">Печать проекто</a></li>
+									<li><a href="#">Печать плакатов</a></li>
+									<li><a href="#">Печать на пенокартоне</a></li>
+									<li><a href="#">Печать документо</a></li>
+									<li><a href="#">Печать чертеже</a></li>
+									<li><a href="#">Цифровая печа</a></li>
+									<li><a href="#">Офсетная печать</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- /Header -->
+
+	<!-- Content -->
+		<div class="content">
+		<!-- Section 1 - Main Page -->
+		<section>
+			<div class="row">
+				<div class="two_cols_templ">
+					<div class="left_col">
+						<div class="sidebar_wrapp">
+							<h3>Каталог</h3>
+							<nav>
+								<ul class="sidebar_nav">
+									<li><a href="#">Студентам</a></li>
+									<li><a href="#">Для бизнеса</a></li>
+									<li><a href="#">Проекты и чертежи</a></li>
+									<li><a href="#">Плакаты и пенокартон</a></li>
+									<li><a href="#">Документы А4, А3</a></li>
+									<li><a href="#">Полиграфия</a></li>
+									<li><a href="#">Цифровая печать</a></li>
+									<li><a href="#">Офсетная печать</a></li>
+									<li><a href="#">УФ печать</a></li>
+									<li><a href="#">Срочная печать</a></li>
+									<li><a href="#">Печать со скидкой %</a></li>
+									<li><a href="#">Дизайн макетов</a></li>
+									<li><a href="#">Постпечатка</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+					<div class="right_col">
+						<nav>
+							<ul class="tab_mav">
+								<li><a href="#" class="active">Акции дня</a></li>
+								<li><a href="#">Новинки</a></li>
+							</ul>
+						</nav>
+						<div class="inner_box">
+							<div class="thumbnails">
+								<a href="#" class="thumb">
+									<div class="thumb_title">
+										<h3>Печать проектов</h3>
+									</div>
+									<div class="thumb_descript">
+										<div class="thumb_item">
+											<div>
+												<img src="img/db.svg" alt="" />
+											</div>
+											<div>
+												<p>от 10 000</p>
+											</div>
+										</div>
+										<div class="thumb_item">
+											<div>
+												<img src="img/percent_str.svg" alt="" />
+											</div>
+											<div>
+												<p>скидка от 10% до 50%</p>
+											</div>
+										</div>
+									</div>
+									<div class="thumb_footer">
+										<p class="more_link">Подробнее</p>
+									</div>
+									<img src="img/thumb_01.png" alt="" />
+								</a>
+								<a href="#" class="thumb">
+									<div class="thumb_title">
+										<h3>Печать на пенокартоне</h3>
+									</div>
+									<div class="thumb_descript">
+										<div class="thumb_item">
+											<div>
+												<img src="img/print.svg" alt="" />
+											</div>
+											<div>
+												<p>от 4-х экземпляров</p>
+											</div>
+										</div>
+									</div>
+									<div class="thumb_footer">
+										<p class="more_link">Подробнее</p>
+									</div>
+									<img src="img/thumb_02.png" class="thumb_2_img" alt="" />
+								</a>
+								<a href="#" class="thumb">
+									<div class="thumb_title">
+										<h3>Визитки “Стандарт”</h3>
+									</div>
+									<div class="thumb_descript">
+										<div class="thumb_item">
+											<div>
+												<img src="img/print.svg" alt="" />
+											</div>
+											<div>
+												<p>от 300 экземпляров</p>
+											</div>
+										</div>
+									</div>
+									<div class="thumb_footer">
+										<p class="more_link">Подробнее</p>
+									</div>
+									<img src="img/thumb_03.png" alt="" />
+								</a>
+								<a href="#" class="thumb">
+									<div class="thumb_title">
+										<h3>Печать документов ч\б</h3>
+									</div>
+									<div class="thumb_descript">
+										<div class="thumb_item">
+											<div>
+												<img src="img/print.svg" alt="" />
+											</div>
+											<div>
+												<p>от 300 экземпляров</p>
+											</div>
+										</div>
+									</div>
+									<div class="thumb_footer">
+										<p class="more_link">Подробнее</p>
+									</div>
+									<img src="img/thumb_04.png" class="thumb_3_img" alt="" />
+								</a>
+								<a href="#" class="thumb">
+									<div class="thumb_title">
+										<h3>Печать документов цвет</h3>
+									</div>
+									<div class="thumb_descript">
+										<div class="thumb_item">
+											<div>
+												<img src="img/print.svg" alt="" />
+											</div>
+											<div>
+												<p>от 300 экземпляров</p>
+											</div>
+										</div>
+									</div>
+									<div class="thumb_footer">
+										<p class="more_link">Подробнее</p>
+									</div>
+									<div class="green">
+										<p><i class="imp"></i>Часто заказывают</p>
+									</div>
+									<img src="img/thumb_05.png" class="thumb_4_img" alt="" />
+								</a>
+								<a href="#" class="thumb">
+									<div class="thumb_title">
+										<h3>Сканирование</h3>
+									</div>
+									<div class="thumb_descript">
+										<div class="thumb_item">
+											<div>
+												<img src="img/print.svg" alt="" />
+											</div>
+											<div>
+												<p>любого формата и тиража</p>
+											</div>
+										</div>
+									</div>
+									<div class="thumb_footer">
+										<p class="more_link">Подробнее</p>
+									</div>
+									<img src="img/thumb_06.png" alt="" />
+								</a>
+							</div>
+						</div>
+						<div class="inner_box">
+							<div class="h2_wrapp">
+								<h2>Основные категории услуг и товаров</h2>
+							</div>
+							<div class="thumbnails_2">
+								<a href="#" class="thumb_2">
+									<div>
+										<div class="thumb_2_title">
+											<h3>Срочная печать</h3>
+										</div>
+										<div class="thumb_2_footer">
+											<p class="more_link">Подробнее</p>
+										</div>
+									</div>
+									<img class="thumb_2_img_01" src="img/thumb_07.png" alt="" />
+								</a>
+								<a href="#" class="thumb_2">
+									<div>
+										<div class="thumb_2_title">
+											<h3>Широкоформатная печать</h3>
+										</div>
+										<div class="thumb_2_footer">
+											<p class="more_link">Подробнее</p>
+										</div>
+									</div>
+									<img class="thumb_2_img_02" src="img/thumb_08.png" alt="" />
+								</a>
+								<a href="#" class="thumb_2">
+									<div>
+										<div class="thumb_2_title">
+											<h3>Дизайн макетов</h3>
+										</div>
+										<div class="thumb_2_footer">
+											<p class="more_link">Подробнее</p>
+										</div>
+									</div>
+									<img src="img/thumb_09.png" alt="" />
+								</a>
+								<a href="#" class="thumb_2">
+									<div>
+										<div class="thumb_2_title">
+											<h3>Цифровая печать</h3>
+										</div>
+										<div class="thumb_2_footer">
+											<p class="more_link">Подробнее</p>
+										</div>
+									</div>
+									<img src="img/thumb_10.png" alt="" />
+								</a>
+								<a href="#" class="thumb_2">
+									<div>
+										<div class="thumb_2_title">
+											<h3>Офсетная печать</h3>
+										</div>
+										<div class="thumb_2_footer">
+											<p class="more_link">Подробнее</p>
+										</div>
+									</div>
+									<img class="thumb_2_img_03" src="img/thumb_11.png" alt="" />
+								</a>
+								<a href="#" class="thumb_2">
+									<div>
+										<div class="thumb_2_title">
+											<h3>Печать для студентов и учеников</h3>
+										</div>
+										<div class="thumb_2_footer">
+											<p class="more_link">Подробнее</p>
+										</div>
+									</div>
+									<img src="img/thumb_12.png" alt="" />
+								</a>
+								<a href="#" class="thumb_2">
+									<div>
+										<div class="thumb_2_title">
+											<h3>Для бизнеса</h3>
+										</div>
+										<div class="thumb_2_footer">
+											<p class="more_link">Подробнее</p>
+										</div>
+									</div>
+									<img class="thumb_2_img_04" src="img/thumb_13.png" alt="" />
+								</a>
+							</div>
+							<div class="show_more_wrapp">
+								<a href="#" class="grey_link">Показать еще</a>
+							</div>
+						</div>
+
+						<div class="counter_sect">
+							<div class="counter_title">
+								<h3>Мы с Вами:</h3>
+							</div>
+							<div class="counter">
+								<div class="counter_num_wrapp">
+									<div class="counter_num">12</div>
+									<div class="counter_num_text">лет</div>
+								</div>
+								<div class="counter_num_wrapp">
+									<div class="counter_num">3</div>
+									<div class="counter_num_text">месяца</div>
+								</div>
+								<div class="counter_num_wrapp">
+									<div class="counter_num">5</div>
+									<div class="counter_num_text">дней</div>
+								</div>
+								<div class="counter_num_wrapp">
+									<div class="counter_num">21</div>
+									<div class="counter_num_text">час</div>
+								</div>
+								<div class="counter_num_wrapp">
+									<div class="counter_num">15</div>
+									<div class="counter_num_text">минут</div>
+								</div>
+								<div class="counter_num_wrapp">
+									<div class="counter_num">25</div>
+									<div class="counter_num_text">секунд</div>
+								</div>
+							</div>
+							<div class="items_wrapp">
+								<div class="item_2">
+									<div>
+										<img src="img/icon_01.svg" alt="" />
+									</div>
+									<div>
+										<p>100% гарантия качества и лучшей цены</p>
+									</div>
+								</div>
+								<div class="item_2">
+									<div>
+										<img src="img/icon_02.svg" alt="" />
+									</div>
+									<div>
+										<p>Без переплат за срочность и правку макетов</p>
+									</div>
+								</div>
+								<div class="item_2">
+									<div>
+										<img src="img/icon_03.svg" alt="" />
+									</div>
+									<div>
+										<p>Скидки постоянным заказчикам</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="inner_box">
+							<div class="h2_wrapp">
+								<h2>Оставьте заявку сейчас и получите скидку <span class="num">20%</span></h2>
+							</div>
+							<form>
+								<div class="contacts_form_wrapp">
+									<div>
+										<div class="input_wrapp">
+											<div class="input_title">
+												<div>
+													<img src="img/user.svg" alt="" />
+												</div>
+												<div>
+													<p>Имя</p>
+												</div>
+											</div>
+											<input type="text" placeholder="Введите ваше имя" />
+										</div>
+									</div>
+									<div>
+										<div class="input_wrapp">
+											<div class="input_title">
+												<div>
+													<img src="img/phone.svg" alt="" />
+												</div>
+												<div>
+													<p>Телефон</p>
+												</div>
+											</div>
+											<input type="tel" placeholder="+7 - _ _ _ - _ _ _ - _ _ - _ _" />
+										</div>
+									</div>
+									<div>
+										<button type="submit" class="gradient_pill submit_btn">Отправить <i class="send_icon"></i></button>
+									</div>
+								</div>
+							</form>
+						</div>
+
+						<div class="inner_box">
+							<div class="h2_wrapp">
+								<h2>О нас</h2>
+							</div>
+							<div class="two_cols_2">
+								<div class="left_col">
+									<div class="scroll_box">
+										<div class="article">
+											<p>Копицентр – это компания, способная повысить эффективность любой рекламы! Среди многочисленных способов презентации товаров, лидирующее место занимает полиграфическая продукция. Печатная реклама различного исполнения позволяет ознакомить потенциального клиента с выгодами обращения в конкретную компанию, предоставить информацию емко, четко, броско и лаконично. Наш копицентр создает буклеты и лифлеты, показывающие отличные результаты – с текстами и изображениями, размещенными в них, знакомится более 90% аудитории.</p>
+											<p>К не менее востребованной полиграфии копировального центра Сopytkks относят визитки, оставляющие клиенту или деловому партнеру контакты. Календари, которые в каждом офисе расположены на видном месте и также несут рекламную составляющую.</p>
+											<p>Копицентр – это компания, способная повысить эффективность любой рекламы! Среди многочисленных способов презентации товаров, лидирующее место занимает полиграфическая продукция. Печатная реклама различного исполнения позволяет ознакомить потенциального клиента с выгодами обращения в конкретную компанию, предоставить информацию емко, четко, броско и лаконично. Наш копицентр создает буклеты и лифлеты, показывающие отличные результаты – с текстами и изображениями, размещенными в них, знакомится более 90% аудитории.</p>
+											<p>К не менее востребованной полиграфии копировального центра Сopytkks относят визитки, оставляющие клиенту или деловому партнеру контакты. Календари, которые в каждом офисе расположены на видном месте и также несут рекламную составляющую.</p>
+										</div>
+									</div>
+								</div>
+								<div class="right_col">
+									<div class="slider_wrapp">
+										<div class="slider">
+											<div>
+												<div class="slide" style="background-image: url(img/slide.jpg)"></div>
+											</div>
+											<div>
+												<div class="slide" style="background-image: url(img/slide.jpg)"></div>
+											</div>
+											<div>
+												<div class="slide" style="background-image: url(img/slide.jpg)"></div>
+											</div>
+											<div>
+												<div class="slide" style="background-image: url(img/slide.jpg)"></div>
+											</div>
+										</div>
+										<div class="slider_arrows"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="inner_box">
+							<div class="h2_wrapp">
+								<h2>Вопросы и ответы</h2>
+							</div>
+							<div class="dropdowns">
+								<div class="dropdown_item dr active">
+									<div class="dropdown_item_title dr_title">
+										<h3>Почему подорожали цены с марта 2022 года?</h3>
+									</div>
+									<div class="dropdown_item_content dr_content">
+										<p>Основной причиной подорожания цен на полиграфическую продукцию принято считать необходимостью из-за резкого увеличение цен в разы на материал (бумага, калька, и т.п), на тонер, чернила и расходные запчасти оборудования, не говоря уже что сами печатающие машины стали дороже в несколько раз. Но исходя из практики с 2010 года по 2022 цены для клиентов были неизменны, а в некоторых областях даже дешевели (к примеру печать проектной документации). Хотя цены на расходы за ниже перечисленное время (более 10лет) выросло порядка 4х раз, и только из-за высокой конкурентности бизнеса стоимость оставалась преждней а многие типографии существовали за счёт оборотных средств или же уходили с рынка. Как итог - ситуация с рынком на закупку стала катализатором повышения, но никак не первоочередной причиной.</p>
+									</div>
+								</div>
+								<div class="dropdown_item dr">
+									<div class="dropdown_item_title dr_title">
+										<h3>Есть ли гарантия на ремонт плоттеров</h3>
+									</div>
+									<div class="dropdown_item_content dr_content">
+										<p>Основной причиной подорожания цен на полиграфическую продукцию принято считать необходимостью из-за резкого увеличение цен в разы на материал (бумага, калька, и т.п), на тонер, чернила и расходные запчасти оборудования, не говоря уже что сами печатающие машины стали дороже в несколько раз. Но исходя из практики с 2010 года по 2022 цены для клиентов были неизменны, а в некоторых областях даже дешевели (к примеру печать проектной документации). Хотя цены на расходы за ниже перечисленное время (более 10лет) выросло порядка 4х раз, и только из-за высокой конкурентности бизнеса стоимость оставалась преждней а многие типографии существовали за счёт оборотных средств или же уходили с рынка. Как итог - ситуация с рынком на закупку стала катализатором повышения, но никак не первоочередной причиной.</p>
+									</div>
+								</div>
+								<div class="dropdown_item dr">
+									<div class="dropdown_item_title dr_title">
+										<h3>Возможен ли выезд специалиста к нам без тронспартировки его к вам в офис? </h3>
+									</div>
+									<div class="dropdown_item_content dr_content">
+										<p>Основной причиной подорожания цен на полиграфическую продукцию принято считать необходимостью из-за резкого увеличение цен в разы на материал (бумага, калька, и т.п), на тонер, чернила и расходные запчасти оборудования, не говоря уже что сами печатающие машины стали дороже в несколько раз. Но исходя из практики с 2010 года по 2022 цены для клиентов были неизменны, а в некоторых областях даже дешевели (к примеру печать проектной документации). Хотя цены на расходы за ниже перечисленное время (более 10лет) выросло порядка 4х раз, и только из-за высокой конкурентности бизнеса стоимость оставалась преждней а многие типографии существовали за счёт оборотных средств или же уходили с рынка. Как итог - ситуация с рынком на закупку стала катализатором повышения, но никак не первоочередной причиной.</p>
+									</div>
+								</div>
+								<div class="dropdown_item dr">
+									<div class="dropdown_item_title dr_title">
+										<h3>Какие способы оплаты возможны?</h3>
+									</div>
+									<div class="dropdown_item_content dr_content">
+										<p>Основной причиной подорожания цен на полиграфическую продукцию принято считать необходимостью из-за резкого увеличение цен в разы на материал (бумага, калька, и т.п), на тонер, чернила и расходные запчасти оборудования, не говоря уже что сами печатающие машины стали дороже в несколько раз. Но исходя из практики с 2010 года по 2022 цены для клиентов были неизменны, а в некоторых областях даже дешевели (к примеру печать проектной документации). Хотя цены на расходы за ниже перечисленное время (более 10лет) выросло порядка 4х раз, и только из-за высокой конкурентности бизнеса стоимость оставалась преждней а многие типографии существовали за счёт оборотных средств или же уходили с рынка. Как итог - ситуация с рынком на закупку стала катализатором повышения, но никак не первоочередной причиной.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="inner_box">
+							<div class="h2_wrapp">
+								<h2>Фотогаллерея и видео</h2>
+							</div>
+							<!-- <div class="video_slider rev_slider">
+								<div class="slide rev_slide">
+									<div class="video">1</div>
+									<iframe width="560" height="315" src="https://www.youtube.com/embed/U383dXPbhTA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								</div>
+								<div class="slide rev_slide">
+									<div class="video">2</div>
+								</div>
+								<div class="slide rev_slide">
+									<div class="video">3</div>
+								</div>
+								<div class="slide rev_slide">
+									<div class="video">4</div>
+								</div>
+								<div class="slide rev_slide">
+									<div class="video">5</div>
+								</div>
+								<div class="slide rev_slide">
+									<div class="video">6</div>
+								</div>
+							</div> -->
+							<div class="video_slider_wrapp">
+								<div class="video_slider poster-main" id="carousel" data-setting='{
+									"width":1100,
+									"height":451,
+									"posterWidth":750,
+									"posterHeight":451,
+									"scale":0.9,
+									"speed":1000,
+									"autoPlay":true,
+									"delay":5000,
+									"verticalAlign":"middle"
+									}'> 
+								   <div class="poster-btn poster-prev-btn"></div> 
+								   <ul class="poster-list"> 
+								    <li class="poster-item" data-src="https://youtu.be/4bX3LhA12Rk" data-fancybox="video-gallery"><a href="#" class="poster_link"><img src="img/video_sl_01.jpg" alt=""/></a></li>
+								    <li class="poster-item" data-src="https://youtu.be/4bX3LhA12Rk" data-fancybox="video-gallery"><a href="#" class="poster_link"><img src="img/video_sl_02.jpg" alt=""/></a></li>
+								    <li class="poster-item" data-src="https://youtu.be/4bX3LhA12Rk" data-fancybox="video-gallery"><a href="#" class="poster_link"><img src="img/video_sl_03.jpg" alt=""/></a></li>
+								    <li class="poster-item" data-src="https://youtu.be/4bX3LhA12Rk" data-fancybox="video-gallery"><a href="#" class="poster_link"><img src="img/video_sl_01.jpg" alt=""/></a></li>
+								    <li class="poster-item" data-src="https://youtu.be/4bX3LhA12Rk" data-fancybox="video-gallery"><a href="#" class="poster_link"><img src="img/video_sl_02.jpg" alt=""/></a></li>
+								   </ul> 
+								   <div class="poster-btn poster-next-btn"></div> 
+								 </div>
+								 <img class="youtube_shape" src="img/youtube.svg" alt="" />
+							</div>
+						</div>
+
+						<div class="inner_box">
+							<div class="h2_wrapp">
+								<h2>Отзывы</h2>
+							</div>
+							<div class="testimonial_slider">
+								<div>
+									<div class="testimonial">
+										<div class="testimonial_header">
+											<div>
+												<h3>ООО “Лидер”</h3>
+											</div>
+											<div>
+												<div class="rateit svg" data-rateit-value="4.5" data-rateit-starwidth="22" data-rateit-starheight="19" data-rateit-ispreset="true" data-rateit-readonly="true"></div>
+											</div>
+										</div>
+										<div class="testimonial_content">
+											<p>Огромное спасибо ООО "ДОКА-Сервис" за ремонт плоттера. Проблема была решена оперативно, качественно и за умеренную плату. Огромная благодарность Хисматулину Уралу! Мы благодарны за помощь и взаимопонимание и надеемся на дальнейшее сотрудничество.</p>
+										</div>
+										<div class="testimonial_footer">
+											<p class="date">25.05.2022</p>
+										</div>
+									</div>
+								</div>
+								<div>
+									<div class="testimonial">
+										<div class="testimonial_header">
+											<div>
+												<h3>Владимир Шведун</h3>
+											</div>
+											<div>
+												<div class="rateit svg" data-rateit-value="5" data-rateit-starwidth="22" data-rateit-starheight="19" data-rateit-ispreset="true" data-rateit-readonly="true"></div>
+											</div>
+										</div>
+										<div class="testimonial_content">
+											<p>Спасибо за грамотную консультацию по ремонту плоттера Администратора и оперативную консультацию и отправку необходимых запчастей Ваших менеджеров</p>
+										</div>
+										<div class="testimonial_footer">
+											<p class="date">25.05.2022</p>
+										</div>
+									</div>
+								</div>
+								<div>
+									<div class="testimonial">
+										<div class="testimonial_header">
+											<div>
+												<h3>ООО “Лидер”</h3>
+											</div>
+											<div>
+												<div class="rateit svg" data-rateit-value="5" data-rateit-starwidth="22" data-rateit-starheight="19" data-rateit-ispreset="true" data-rateit-readonly="true"></div>
+											</div>
+										</div>
+										<div class="testimonial_content">
+											<p>Огромное спасибо ООО "ДОКА-Сервис" за ремонт плоттера. Проблема была решена оперативно, качественно и за умеренную плату. Огромная благодарность Хисматулину Уралу! Мы благодарны за помощь и взаимопонимание и надеемся на дальнейшее сотрудничество.</p>
+										</div>
+										<div class="testimonial_footer">
+											<p class="date">25.05.2022</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Section 1 - Main Page -->
+		</div>
+	<!-- /Content -->
+
+	<!-- Footer -->
+
+		<footer class="footer_section">
+			<div class="row">
+				<div class="footer_templ">
+					<div class="left_col">
+						<div class="seo_text_templ">
+							<div>
+								<div class="seo_text_title">
+									<h3>Прайс-листы</h3>
+								</div>
+								<div class="seo_list_wrapp">
+									<ul class="seo_list">
+										<li><a href="#">Бланки</a></li>
+										<li><a href="#">Блокноты</a></li>
+										<li><a href="#">Буклеты</a></li>
+										<li><a href="#">Визитки</a></li>
+										<li><a href="#">Каталоги</a></li>
+										<li><a href="#">Листовки</a></li>
+										<li><a href="#">Меню</a></li>
+										<li><a href="#">Наклейки</a></li>
+										<li><a href="#">Открытки</a></li>
+										<li><a href="#">Презентации</a></li>
+										<li><a href="#">Приглашения</a></li>
+										<li><a href="#">Этикетки</a></li>
+										<li><a href="#">Бумажные стаканы</a></li>
+										<li><a href="#">Плакаты</a></li>
+										<li><a href="#">Тейбл-тенты</a></li>
+										<li><a href="#">Календари</a></li>
+										<li><a href="#">Полиграфия для гостиниц</a></li>
+									</ul>
+								</div>
+							</div>
+							<div>
+								<div class="seo_text_title">
+									<h3>Информация</h3>
+								</div>
+								<div class="seo_list_wrapp">
+									<ul class="seo_list">
+										<li><a href="#">О типографии</a></li>
+										<li><a href="#">Оплата и доставка</a></li>
+										<li><a href="#">Переделка и возврат</a></li>
+										<li><a href="#">Требования к макету</a></li>
+										<li><a href="#">Оборудование</a></li>
+										<li><a href="#">Вопрос-ответ</a></li>
+										<li><a href="#">Политика конфиденциальности</a></li>
+										<li><a href="#">Конструктор макетов</a></li>
+										<li><a href="#">Разработка дополненной реальности</a></li>
+										<li><a href="#">Вакансии</a></li>
+										<li><a href="#">Отзывы</a></li>
+										<li><a href="#">Генератор QR-кодов</a></li>
+										<li><a href="#">Генератор штрих-кодов</a></li>
+										<li><a href="#">Пример листалки</a></li>
+										<li><a href="#">Инструкция по Photoshop</a></li>
+									</ul>
+								</div>
+							</div>
+							<div>
+								<div class="seo_text_title">
+									<h3>Реквизиты</h3>
+								</div>
+								<div class="contacts_content">
+									<p><span class="yellow">ИНН:</span> 7708254076</p>
+									<p><span class="yellow">КПП:</span> 770801001</p>
+									<h3>ОАО «АЛЬФА-БАНК»</h3>
+									<p><span class="yellow">р/с:</span> 40702810201400005360</p>
+									<p><span class="yellow">к/с:</span> 30101810200000000593</p>
+									<p><span class="yellow">БИК:</span> 044525593</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="right_col">
+						<div class="contacts_two_cols">
+							<div>
+								<div class="seo_text_title">
+									<h3>Контакты</h3>
+								</div>
+								<ul class="tels_list">
+									<li><a class="icon_link" href="https://api.whatsapp.com/send?phone=79262636831"><img class="icon_img" src="img/whatsup.svg" alt="" />+7-926-263-68-31</a></li>
+									<li><a class="icon_link" href="twl:+79262636831"><img  class="icon_img" src="img/phone_orange.svg" alt="" />+7-926-263-68-31</a></li>
+								</ul>
+								<div class="link_wrapp">
+									<a class="icon_link" href="mailto:copytkks@yandex.ru"><img class="icon_img" src="img/mail_orange.svg" alt="" />copytkks@yandex.ru</a>
+								</div>
+								<ul class="orange_links orange_links_2">
+									<li><a href="#" class="orange_link">Напишите нам</a></li>
+									<li><a href="#" class="orange_link">Закажите звонок</a></li>
+								</ul>
+							</div>
+							<div>
+								<a href="#" class="logo_2">
+									<svg width="137" height="84" viewBox="0 0 137 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M22.1951 6.59424L15.623 23.5553L24.7757 9.18642L22.1951 6.59424Z" fill="#4BBBE5"/>
+									<path d="M29.3881 4.99023L18.4473 25.8926L32.365 9.20061L29.3881 4.99023Z" fill="#6F7BBA"/>
+									<path d="M36.3706 3.59521L21.061 28.4389L39.7455 9.4265L36.3706 3.59521Z" fill="#873D8D"/>
+									<path d="M42.8048 1.6499L23.1274 30.4357L46.5769 9.09847L42.8048 1.6499Z" fill="#B2227F"/>
+									<path d="M53.5416 0.825195L25.1294 34.1376L57.2604 10.6358L53.5416 0.825195Z" fill="#CB2452"/>
+									<path d="M64.2757 0L27.1333 37.8408L67.9422 12.1699L64.2757 0Z" fill="#E64F28"/>
+									<path d="M77.4268 1.85645L28.5547 40.703L79.9605 16.6159L77.4268 1.85645Z" fill="#EE761C"/>
+									<path d="M87.9642 11.2285L30.415 43.3323L88.0915 27.0453L87.9642 11.2285Z" fill="#F59D0E"/>
+									<path d="M100.94 23.3022L31.7168 45.1442L97.5801 40.4056L100.94 23.3022Z" fill="#FBC707"/>
+									<path d="M115.791 37.2637L34.897 48.8393L108.947 55.6536L115.791 37.2637Z" fill="#F7E808"/>
+									<path d="M20.201 77.8824C19.6955 79.0974 18.9445 80.1683 17.9516 81.0988C16.9596 82.0293 15.8241 82.7424 14.5532 83.2443C13.2877 83.7472 11.9888 83.9991 10.6575 83.9991C9.20603 83.9991 7.83403 83.7155 6.53965 83.151C5.24527 82.5875 4.10435 81.801 3.11777 80.7863C2.1339 79.7715 1.36395 78.6081 0.822373 77.2907C0.274474 75.9779 0.000976562 74.5953 0.000976562 73.1574C0.000976562 71.2484 0.478469 69.4707 1.43436 67.8317C2.38934 66.189 3.67921 64.8852 5.30214 63.9167C6.92056 62.949 8.66896 62.4652 10.5428 62.4652C11.9058 62.4652 13.2426 62.7216 14.5496 63.2335C15.8566 63.7454 17.0111 64.4766 18.0229 65.4307C19.0339 66.3847 19.7993 67.4928 20.3147 68.7504H15.974C15.3286 67.9631 14.5271 67.3397 13.5567 66.874C12.5927 66.4128 11.5953 66.1809 10.5708 66.1809C9.35496 66.1809 8.22396 66.5016 7.18503 67.1485C6.147 67.7954 5.32471 68.6661 4.72265 69.7652C4.11518 70.8678 3.8128 72.0457 3.8128 73.3024C3.8128 74.4947 4.1233 75.63 4.74522 76.7154C5.36171 77.7954 6.19665 78.6607 7.2437 79.313C8.28715 79.9599 9.40551 80.2852 10.597 80.2852C12.5494 80.2852 14.2752 79.4852 15.7718 77.8833H20.201V77.8824ZM43.1279 73.2743C43.1279 75.2195 42.6459 77.0126 41.6773 78.6607C40.7124 80.3088 39.4045 81.6071 37.7536 82.5657C36.1072 83.5198 34.3254 84 32.4154 84C30.5055 84 28.7246 83.5198 27.0782 82.5657C25.4272 81.6062 24.1193 80.3088 23.1544 78.6607C22.1859 77.0126 21.7039 75.2204 21.7039 73.2743C21.7039 71.3145 22.1805 69.5033 23.1364 67.8462C24.0923 66.1845 25.3948 64.8762 27.0412 63.913C28.693 62.949 30.482 62.4652 32.4163 62.4652C34.3507 62.4652 36.1397 62.949 37.787 63.913C39.4325 64.8762 40.7359 66.1845 41.6918 67.8462C42.6522 69.5033 43.1288 71.3145 43.1288 73.2743H43.1279ZM25.5157 73.1954C25.5157 74.4385 25.8271 75.6119 26.4517 76.7009C27.0782 77.7954 27.923 78.6652 28.9836 79.313C30.0505 79.9599 31.1915 80.2852 32.4154 80.2852C33.6403 80.2852 34.7803 79.9599 35.8472 79.313C36.9087 78.6652 37.7536 77.7954 38.3791 76.7009C39.0056 75.6119 39.3161 74.4385 39.3161 73.1954C39.3161 71.9297 39.0101 70.7519 38.3936 69.6764C37.7771 68.5964 36.9376 67.7447 35.8806 67.1159C34.8182 66.4925 33.6683 66.1809 32.4163 66.1809C31.1689 66.1809 30.0144 66.4925 28.952 67.1159C27.895 67.7447 27.0547 68.5964 26.4391 69.6764C25.8217 70.7519 25.5166 71.9297 25.5166 73.1954H25.5157ZM46.1382 83.4971V62.8575H50.9754H51.7038C52.4079 62.8575 53.0162 62.8811 53.5262 62.9218C54.0317 62.9644 54.5462 63.0668 55.0616 63.2299C55.5806 63.3875 56.0716 63.6304 56.5401 63.9466C57.097 64.3235 57.5836 64.7892 57.9961 65.3383C58.414 65.8873 58.729 66.4925 58.9474 67.1494C59.165 67.8054 59.2715 68.4713 59.2715 69.1463C59.2715 70.1801 59.063 71.1623 58.6405 72.0846C58.2235 73.0061 57.616 73.7871 56.8181 74.4213C56.3587 74.7928 55.8532 75.0673 55.3017 75.2494C54.7448 75.4306 54.1797 75.5475 53.5957 75.5983C53.0153 75.6499 52.3338 75.6771 51.5594 75.6771H50.6974H49.95V83.4971H46.1382ZM50.6414 71.9623C51.9944 71.9623 52.9774 71.888 53.5903 71.744C54.1563 71.5573 54.6103 71.2366 54.9497 70.7799C55.2882 70.3188 55.4597 69.7933 55.4597 69.1971C55.4597 68.5873 55.2737 68.0663 54.9072 67.6242C54.5408 67.1875 54.0687 66.8885 53.4838 66.7345C52.9278 66.6275 51.9818 66.5723 50.6414 66.5723H49.95V71.9623H50.6414ZM66.6731 75.8719L59.9114 62.8575H64.1132L68.5885 72.3528L73.0727 62.8575H77.2429L70.4849 75.8719V83.4971H66.6731V75.8719ZM81.0628 66.5714H77.279V62.8566H88.7145V66.5714H84.8738V83.4962H81.0619V66.5714H81.0628ZM90.6632 62.8566H94.4751V71.7938L100.875 62.8566H105.438L97.6749 72.9943L105.438 83.4962H100.875L94.4751 74.4467V83.4962H90.6632V62.8566ZM107.919 62.8566H111.731V71.7938L118.129 62.8566H122.693L114.931 72.9943L122.693 83.4962H118.129L111.731 74.4467V83.4962H107.919V62.8566ZM127.651 77.6867C127.651 78.4822 127.929 79.1164 128.482 79.5812C129.038 80.0515 129.715 80.2834 130.517 80.2834C130.99 80.2834 131.432 80.172 131.849 79.9436C132.261 79.7208 132.591 79.4091 132.827 79.0131C133.068 78.6127 133.189 78.1714 133.189 77.6867C133.189 76.6765 132.878 75.9362 132.257 75.466C131.63 74.9957 130.749 74.5717 129.598 74.1948C128.723 73.9012 128.026 73.6313 127.512 73.3803C126.997 73.1329 126.505 72.7696 126.042 72.2948C125.541 71.7829 125.147 71.1732 124.86 70.461C124.567 69.7489 124.424 69.0367 124.424 68.3282C124.424 67.2301 124.697 66.2289 125.245 65.3355C125.791 64.4367 126.534 63.7346 127.465 63.2272C128.392 62.7198 129.403 62.4634 130.489 62.4634C131.268 62.4634 132.024 62.6165 132.756 62.92C133.489 63.2281 134.134 63.6467 134.691 64.1767C135.247 64.7076 135.687 65.3355 136.016 66.0622C136.342 66.7834 136.504 67.5417 136.504 68.3336H132.576C132.548 67.7003 132.312 67.1839 131.862 66.7834C131.408 66.3784 130.879 66.1781 130.267 66.1781C129.655 66.1781 129.163 66.3874 128.793 66.8015C128.422 67.2156 128.235 67.7374 128.235 68.3608C128.235 69.0313 128.468 69.5522 128.936 69.9156C129.4 70.2825 130.031 70.5996 130.824 70.8751C131.825 71.2103 132.614 71.503 133.193 71.7503C133.768 71.9967 134.315 72.3365 134.835 72.7687C136.278 73.9194 137.001 75.4832 137.001 77.4611C137.001 78.667 136.699 79.7742 136.095 80.7709C135.493 81.7711 134.682 82.5585 133.657 83.1356C132.631 83.7082 131.524 83.9973 130.322 83.9973C129.162 83.9973 128.068 83.7173 127.048 83.1637C126.024 82.6047 125.203 81.8418 124.591 80.8778C123.979 79.9137 123.668 78.8482 123.668 77.684H127.651V77.6867Z" fill="white"/>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<div class="contact_thumb white">
+							<div>
+								<svg width="29" height="35" viewBox="0 0 29 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M12.9557 0.0636C7.93184 0.686629 3.72339 3.6069 1.49828 8.01425C-1.16153 13.2828 -0.20536 20.1033 3.77378 24.245C4.51137 25.0128 4.5557 25.0407 5.03474 25.0407C5.46126 25.0407 5.57512 24.9918 5.84154 24.6942C6.07117 24.4377 6.15176 24.241 6.15176 23.9366C6.15176 23.5816 6.04916 23.4044 5.40066 22.6388C3.24201 20.0902 2.29105 17.5969 2.29105 14.4853C2.29105 10.123 4.47214 6.29601 8.27023 3.9941C11.8652 1.81525 16.6718 1.7359 20.3444 3.79477C23.9687 5.8267 26.1995 9.18329 26.6735 13.3184C26.9197 15.4668 26.4542 17.9009 25.3948 20.0031C24.5909 21.5984 24.0934 22.1576 18.4098 27.8553L12.8508 33.4279L13.6439 34.214L14.4368 35L15.1049 34.3569C17.0777 32.4577 25.6554 23.7965 26.0121 23.3433C28.8759 19.7064 29.7672 14.5437 28.3107 10.0298C27.6265 7.90912 26.5829 6.16277 25.0281 4.53661C22.8683 2.27756 20.2775 0.855832 17.2624 0.275237C15.9255 0.0177719 14.0633 -0.0736722 12.9557 0.0636ZM10.7781 9.47417C10.4867 10.2174 9.67078 12.2815 8.96487 14.061L7.68147 17.2966L7.12918 17.3286L6.577 17.3607V18.0447V18.7287H9.3411H12.1052V18.0391V17.3496H11.6914H11.2776L11.6797 16.2092C11.9009 15.582 12.123 15.0899 12.1732 15.1158C12.2235 15.1417 12.7431 15.947 13.3278 16.9053C13.9125 17.8637 14.4356 18.6475 14.4901 18.6471C14.5447 18.6466 15.0887 17.8272 15.699 16.8262C16.3093 15.8252 16.8325 15.0299 16.8616 15.0588C16.8906 15.0879 17.0937 15.6151 17.3127 16.2306L17.7109 17.3496H17.3H16.8892V18.0391V18.7287H19.6533H22.4174V18.0391V17.3496L21.8593 17.348L21.3012 17.3465L21.0476 16.685C20.195 14.4609 17.7132 8.26641 17.6485 8.20053C17.6059 8.15714 16.8839 9.32183 16.0442 10.7888C14.7009 13.1353 14.501 13.4335 14.3811 13.2701C14.3063 13.1678 13.608 11.9677 12.8296 10.603C12.0511 9.23845 11.3903 8.12213 11.361 8.12234C11.3318 8.12256 11.0694 8.73084 10.7781 9.47417Z" fill="#BDBDBD"/>
+								</svg>
+							</div>
+							<div>
+								<h3>м. Полянка</h3>
+								<p>Москва, Большая Якиманка, 27</p>
+							</div>
+						</div>
+						<div class="soc_list_wrapp">
+							<div class="soc_list_title">
+								<h3>Подпишитесь на нас!</h3>
+							</div>
+							<ul class="soc_list">
+								<li><a href="#" class="soc_link"><img src="img/vk_white.svg" alt="" /></a></li>
+								<li><a href="#" class="soc_link"><img src="img/fb_white.svg" alt="" /></a></li>
+								<li><a href="#" class="soc_link"><img src="img/inst_white.svg" alt="" /></a></li>
+								<li><a href="#" class="soc_link"><img src="img/youtube_white.svg" alt="" /></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+	<!-- /Footer -->
+
+	</div>
+
+	<link rel="stylesheet" type="text/css" href="responsive.css">
+	<link rel="stylesheet" type="text/css" href="slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="vendors/css/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" type="text/css" href="vendors/css/jquery.fancybox.css">
+	<script src="vendors/js/jquery.js"></script>
+	<script src="slick/slick.js"></script>
+	<script type="text/javascript" src="vendors/js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="vendors/js/jquery.fancybox.js"></script>
+	<script src="vendors/js/inputmask.js"></script>
+	<script src="vendors/js/carousel.js"></script>
+	<script src="vendors/js/hammer.min.js"></script>
+	<script src="vendors/js/jquery.rateit.js"></script>
+	<script src="js/scripts.js"></script>
+
+</body>
+</html>
