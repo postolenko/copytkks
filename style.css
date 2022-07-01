@@ -323,10 +323,6 @@ textarea:focus {
     border: 1px solid transparent;
 }
 
-.slick-arrow:hover {
-
-}
-
 .slick-arrow img {
     display: block;
     max-width: 100%;
