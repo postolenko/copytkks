@@ -165,13 +165,64 @@ $(document).ready(function() {
       }
   });
 
-  // setInterval(function() {
-  //   var date1 = new Date('2011-01-22');
-  //   var date2 = new Date();
-  //   console.log ('diff in secods :' + ( date2.getTime() - date1.getTime() ) / 1000);
-  //   console.log ('</br>diff in minutes :' + ( date2.getTime() - date1.getTime() ) / 60000);
-  //   console.log ('</br>diff in hours :' + ( date2.getTime() - date1.getTime() ) / 3600000);
-  //   console.log ("_______");
-  // }, 1000);
+  // ----------
+
+  var year = $("#counter").attr("data-startyear");
+  var month = $("#counter").attr("data-startmonth");
+  var day = $("#counter").attr("data-startday");
+  var hours = $("#counter").attr("data-starthours");
+  var minutes = $("#counter").attr("data-startminutes");
+  var seconds = $("#counter").attr("data-startseconds");
+
+  const creationDateObj = {
+    year: year,
+    month: month,
+    day: day,
+    hours: hours,
+    minutes: minutes,
+    seconds: seconds
+  };
+
+  const creationDate = new Date(
+    creationDateObj.year,
+    creationDateObj.month,
+    creationDateObj.day,
+    creationDateObj.hours,
+    creationDateObj.minutes,
+    creationDateObj.seconds
+  );
+
+  setInterval(() => {
+
+    const now = new Date();
+    const diffInMS = now - creationDate;
+    const diffAsDate = new Date(diffInMS);
+
+    const [
+      years,
+      months,
+      days,
+      hours,
+      minutes,
+      seconds
+    ] = diffAsDate
+        .toISOString()
+        .split('T')
+        .map(timePart => 
+          timePart
+            .split(/-|:|\./)
+            .map(str => +str)
+        )
+        .flat();
+     var y = years - 1970;
+     var m = months - 1;
+     var d = days - 1;
+    $("#year").text(y);
+    $("#month").text(m);
+    $("#day").text(d);
+    $("#hour").text(hours);
+    $("#minutes").text(minutes);
+    $("#second").text(seconds);
+  }, 1000);
   
 });
