@@ -9,16 +9,14 @@
 	<meta name="description" content="">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="icon" type="image/png" href="favicon/favicon.ico" sizes="16x16">	
-	<title></title>
-	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+	<title>Copytkks</title>
 </head>
 
 <body>
 
 	<div class="wrapper">
 
-	<!-- Header -->
-		
+	<!-- Header -->		
 	<header>
 		<div class="header_site">
 			<div class="top_header">
@@ -38,7 +36,7 @@
 								</ul>
 							</nav>
 						</div>
-						<div class="right">
+						<div class="right novisible_1024">
 							<form>
 								<div class="search_form_wrapp">
 									<div>
@@ -91,46 +89,64 @@
 							</div>
 						</div>
 						<div class="col">
-							<div class="contacts_lists_templ">
-								<div>
-									<div class="contact_thumb_2">
-										<div>
-											<img src="img/clock.svg" alt="" />
+							<div class="novisible_1024">
+								<div class="contacts_lists_templ">
+									<div>
+										<div class="contact_thumb_2">
+											<div>
+												<img src="img/clock.svg" alt="" />
+											</div>
+											<div>
+												<p>График работы: с 8:00 до 22:00</p>
+											</div>
 										</div>
-										<div>
-											<p>График работы: с 8:00 до 22:00</p>
-										</div>
-									</div>
-									<div class="contact_thumb_2">
-										<div>
-											<img src="img/checked.svg" alt="" />
-										</div>
-										<div>
-											<p>Прием заказов: круглосуточно по почте</p>
-										</div>
-									</div>
-								</div>
-								<div>
-									<div class="contact_thumb_3">
-										<div>
-											<img src="img/whatsup.svg" alt="" />
-										</div>
-										<div>
-											<a href="https://api.whatsapp.com/send?phone=79262636831" class="tel_link">+7-926-263-68-31</a>
+										<div class="contact_thumb_2">
+											<div>
+												<img src="img/checked.svg" alt="" />
+											</div>
+											<div>
+												<p>Прием заказов: круглосуточно по почте</p>
+											</div>
 										</div>
 									</div>
-									<div class="contact_thumb_3">
-										<div>
-											<img src="img/tel.svg" alt="" />
+									<div>
+										<div class="contact_thumb_3">
+											<div>
+												<img src="img/whatsup.svg" alt="" />
+											</div>
+											<div>
+												<a href="https://api.whatsapp.com/send?phone=79262636831" class="tel_link">+7-926-263-68-31</a>
+											</div>
 										</div>
-										<div>
-											<a href="tel:+79262636831" class="tel_link">+7-926-263-68-31</a>
+										<div class="contact_thumb_3">
+											<div>
+												<img src="img/tel.svg" alt="" />
+											</div>
+											<div>
+												<a href="tel:+79262636831" class="tel_link">+7-926-263-68-31</a>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
+							<div class="visible_1024">
+								<form>
+									<div class="search_form_wrapp">
+										<div>
+											<input class="search_input" type="text" placeholder="Поиск по сайту" />
+										</div>
+										<div>
+											<button type="submit" class="search_btn">
+												<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M6.99689 0C3.13351 0 0.000976562 3.13253 0.000976562 6.99594C0.000976562 10.8593 3.13351 13.9919 6.99692 13.9919C8.48255 13.9919 9.86031 13.5285 10.9928 12.7392L10.9937 12.7384L16.1822 17.9269C16.2784 18.0232 16.4315 18.0256 16.5303 17.9269L17.9287 16.5285C18.025 16.4322 18.02 16.2726 17.9279 16.1804L12.7401 10.9927C13.5294 9.85933 13.9928 8.48154 13.9928 6.99594C13.9928 3.13253 10.8603 0 6.99689 0ZM6.99689 12.3458C4.04213 12.3458 1.64706 9.9507 1.64706 6.99594C1.64706 4.04118 4.04216 1.64611 6.99689 1.64611C9.95162 1.64611 12.3467 4.04118 12.3467 6.99594C12.3467 9.9507 9.95165 12.3458 6.99689 12.3458Z" fill="white"/>
+												</svg>
+											</button>
+										</div>
+									</div>
+								</form>
+							</div>
 						</div>
-						<div class="col">
+						<div class="col novisible_1024">
 							<div class="contacts_right">
 								<div>
 									<div>
@@ -152,6 +168,11 @@
 								</div>
 							</div>
 						</div>
+						<button class="respmenubtn_2">
+							<span></span>
+							<span></span>
+							<span></span>
+						</button>
 					</div>
 				</div>
 			</div>
@@ -237,13 +258,199 @@
 			</div>
 		</div>
 	</header>
-
 	<!-- /Header -->
+
+	<!-- Resp Nav -->
+	<div class="resp_nav" id="resp_nav">
+		<button type="button" class="close_nav">
+			<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M13.9827 14.7759L4.53909 5.48458L5.54901 4.4581L14.9926 13.7494L13.9827 14.7759ZM5.49862 14.958L4.51776 13.9929L14.0559 4.29842L15.0368 5.26345L5.49862 14.958Z" fill="#888888"/>
+			</svg>
+		</button>
+		<div class="resp_nav_box">
+			<ul class="res_nav_tabs">
+				<li>
+					<a href="#tab1" class="resp_link_tab">Навигация по сайту</a>
+				</li>
+				<li>
+					<a href="#tab2" class="resp_link_tab">Каталог</a>
+				</li>
+				<li>
+					<a href="#tab3" class="resp_link_tab">Все услуги</a>
+				</li>
+				<li>
+					<a href="#tab4" class="resp_link_tab">Продукция</a>
+				</li>
+			</ul>
+			<div class="resp_tab" id="tab1">
+				<div class="resp_tab_header">
+					<h3>Навигация по сайту</h3>
+				</div>
+				<div class="resp_tab_list_wrapp">
+					<ul class="resp_tab_list">
+						<li><a href="#">Услуги</a></li>
+						<li><a href="#">Цены</a></li>
+						<li><a href="#">Акции</a></li>
+						<li><a href="#">О компании</a></li>
+						<li><a href="#">Оборудование</a></li>
+						<li><a href="#">Заказчики</a></li>
+						<li><a href="#">Оплата и доставка</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="resp_tab" id="tab2">
+				<div class="resp_tab_header">
+					<h3>Каталог</h3>
+				</div>
+				<div class="resp_tab_list_wrapp cols_2">
+					<ul class="resp_tab_list">
+						<li><a href="#">Студентам</a></li>
+						<li><a href="#">Для бизнеса</a></li>
+						<li><a href="#">Проекты и чертежи</a></li>
+						<li><a href="#">Плакаты и пенокартон</a></li>
+						<li><a href="#">Документы А4, А3</a></li>
+						<li><a href="#">Полиграфия</a></li>
+						<li><a href="#">Цифровая печать</a></li>  
+						<li><a href="#">Офсетная печать</a></li>
+					</ul>
+					<ul class="resp_tab_list">
+						<li><a href="#">УФ печать</a></li>
+						<li><a href="#">Срочная печать</a></li>
+						<li><a href="#">Печать со скидкой</a></li>
+						<li><a href="#">Дизайн макетов</a></li>
+						<li><a href="#">Постпечатка</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="resp_tab" id="tab3">
+				<div class="resp_tab_header">
+					<h3>Все услуги</h3>
+				</div>
+				<div class="scroll_x">
+					<div class="resp_tab_list_wrapp cols_3">
+						<ul class="resp_tab_list">
+							<li><a href="#">Бейджи</a></li>
+							<li><a href="#">Бирки</a></li>
+							<li><a href="#">Бланки</a></li>
+							<li><a href="#">Блокноты</a></li>
+							<li><a href="#">Браслеты</a></li>
+							<li><a href="#">Брошюры</a></li>
+							<li><a href="#">Буклеты</a></li>
+							<li><a href="#">Бумажные стаканы</a></li>
+							<li><a href="#">Визитки</a></li>
+							<li><a href="#">Газеты</a></li>
+							<li><a href="#">Годовые отчеты</a></li>
+							<li><a href="#">Голограммы</a></li>
+						</ul>
+						<ul class="resp_tab_list">
+							<li><a href="#">Журналы</a></li>
+							<li><a href="#">Календари</a></li>
+							<li><a href="#">Каталоги</a></li>
+							<li><a href="#">Книги</a></li>
+							<li><a href="#">Конверты</a></li>
+							<li><a href="#">Кубарики</a></li>
+							<li><a href="#">Листовки</a></li>
+							<li><a href="#">Лифлеты</a></li>
+							<li><a href="#">Магнитные карты</a></li>
+							<li><a href="#">Магниты</a></li>
+							<li><a href="#">Меню</a></li>
+							<li><a href="#">Наклейки</a></li>
+						</ul>
+						<ul class="resp_tab_list">
+							<li><a href="#">Открытки</a></li>
+							<li><a href="#">Папки</a></li>
+							<li><a href="#">Печать биографий</a></li>
+							<li><a href="#">Пластиковые карты</a></li>
+							<li><a href="#">Презентации</a></li>
+							<li><a href="#">Приглашения</a></li>
+							<li><a href="#">Сертификаты</a></li>
+							<li><a href="#">Скотч</a></li>
+							<li><a href="#">Удостоверения</a></li>
+							<li><a href="#">Флаеры</a></li>
+							<li><a href="#">Чековая лента</a></li>
+							<li><a href="#">Этикетки</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="resp_tab" id="tab4">
+				<div class="resp_tab_header">
+					<h3>Продукция</h3>
+				</div>
+				<div class="resp_tab_list_wrapp">
+					<ul class="resp_tab_list">
+						<li><a href="#">Печать проектов</a></li>
+						<li><a href="#">Печать плакатов</a></li>
+						<li><a href="#">Печать на пенокартоне</a></li>
+						<li><a href="#">Печать документов</a></li>
+						<li><a href="#">Печать чертежей</a></li>
+						<li><a href="#">Цифровая печать</a></li>
+						<li><a href="#">Офсетная печать</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="resp_nav_footer">
+			<div class="contact_thumb">
+				<div>
+					<svg width="29" height="35" viewBox="0 0 29 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M12.9557 0.0636C7.93184 0.686629 3.72339 3.6069 1.49828 8.01425C-1.16153 13.2828 -0.20536 20.1033 3.77378 24.245C4.51137 25.0128 4.5557 25.0407 5.03474 25.0407C5.46126 25.0407 5.57512 24.9918 5.84154 24.6942C6.07117 24.4377 6.15176 24.241 6.15176 23.9366C6.15176 23.5816 6.04916 23.4044 5.40066 22.6388C3.24201 20.0902 2.29105 17.5969 2.29105 14.4853C2.29105 10.123 4.47214 6.29601 8.27023 3.9941C11.8652 1.81525 16.6718 1.7359 20.3444 3.79477C23.9687 5.8267 26.1995 9.18329 26.6735 13.3184C26.9197 15.4668 26.4542 17.9009 25.3948 20.0031C24.5909 21.5984 24.0934 22.1576 18.4098 27.8553L12.8508 33.4279L13.6439 34.214L14.4368 35L15.1049 34.3569C17.0777 32.4577 25.6554 23.7965 26.0121 23.3433C28.8759 19.7064 29.7672 14.5437 28.3107 10.0298C27.6265 7.90912 26.5829 6.16277 25.0281 4.53661C22.8683 2.27756 20.2775 0.855832 17.2624 0.275237C15.9255 0.0177719 14.0633 -0.0736722 12.9557 0.0636ZM10.7781 9.47417C10.4867 10.2174 9.67078 12.2815 8.96487 14.061L7.68147 17.2966L7.12918 17.3286L6.577 17.3607V18.0447V18.7287H9.3411H12.1052V18.0391V17.3496H11.6914H11.2776L11.6797 16.2092C11.9009 15.582 12.123 15.0899 12.1732 15.1158C12.2235 15.1417 12.7431 15.947 13.3278 16.9053C13.9125 17.8637 14.4356 18.6475 14.4901 18.6471C14.5447 18.6466 15.0887 17.8272 15.699 16.8262C16.3093 15.8252 16.8325 15.0299 16.8616 15.0588C16.8906 15.0879 17.0937 15.6151 17.3127 16.2306L17.7109 17.3496H17.3H16.8892V18.0391V18.7287H19.6533H22.4174V18.0391V17.3496L21.8593 17.348L21.3012 17.3465L21.0476 16.685C20.195 14.4609 17.7132 8.26641 17.6485 8.20053C17.6059 8.15714 16.8839 9.32183 16.0442 10.7888C14.7009 13.1353 14.501 13.4335 14.3811 13.2701C14.3063 13.1678 13.608 11.9677 12.8296 10.603C12.0511 9.23845 11.3903 8.12213 11.361 8.12234C11.3318 8.12256 11.0694 8.73084 10.7781 9.47417Z" fill="#BDBDBD"/>
+					</svg>
+				</div>
+				<div>
+					<h3>м. Полянка</h3>
+					<p>Москва, Большая Якиманка, 27</p>
+				</div>
+			</div>
+			<div class="contact_thumb_2">
+				<div>
+					<img src="img/mail.svg" alt="">
+				</div>
+				<div>
+					<a class="mail_link" href="mail:copytkks@yandex.ru">copytkks@yandex.ru</a>
+				</div>
+			</div>
+			<ul class="orange_links">
+				<li><a href="#">Напишите нам </a></li>
+				<li><a href="#">Закажите звонок</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /Resp Nav -->
 
 	<!-- Content -->
 		<div class="content">
+		<!-- Resp Contacts -->
+		<div class="resp_contacts_sect">
+			<div class="row">
+				<div class="resp_contacts">
+					<div>
+						<div class="contact_thumb_3">
+							<div>
+								<img src="img/whatsup.svg" alt="">
+							</div>
+							<div>
+								<a href="https://api.whatsapp.com/send?phone=79262636831" class="tel_link">+7-926-263-68-31</a>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="contact_thumb_3">
+							<div>
+								<img src="img/tel.svg" alt="">
+							</div>
+							<div>
+								<a href="tel:+79262636831" class="tel_link">+7-926-263-68-31</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /Resp Contacts -->
 		<!-- Section 1 - Main Page -->
-		<section>
+		<section class="sect_1">
 			<div class="row">
 				<div class="two_cols_templ">
 					<div class="left_col">
@@ -302,7 +509,7 @@
 									<div class="thumb_footer">
 										<p class="more_link">Подробнее</p>
 									</div>
-									<img src="img/thumb_01.png" alt="" />
+									<img class="thumb_1_img" src="img/thumb_01.png" alt="" />
 								</a>
 								<a href="#" class="thumb">
 									<div class="thumb_title">
@@ -340,7 +547,7 @@
 									<div class="thumb_footer">
 										<p class="more_link">Подробнее</p>
 									</div>
-									<img src="img/thumb_03.png" alt="" />
+									<img class="thumb_2_2_img" src="img/thumb_03.png" alt="" />
 								</a>
 								<a href="#" class="thumb">
 									<div class="thumb_title">
@@ -400,7 +607,7 @@
 									<div class="thumb_footer">
 										<p class="more_link">Подробнее</p>
 									</div>
-									<img src="img/thumb_06.png" alt="" />
+									<img src="img/thumb_06.png" class="thumb_5_img" alt="" />
 								</a>
 							</div>
 						</div>
@@ -440,7 +647,7 @@
 											<p class="more_link">Подробнее</p>
 										</div>
 									</div>
-									<img src="img/thumb_09.png" alt="" />
+									<img class="thumb_2_img_2_2" src="img/thumb_09.png" alt="" />
 								</a>
 								<a href="#" class="thumb_2">
 									<div>
@@ -451,7 +658,7 @@
 											<p class="more_link">Подробнее</p>
 										</div>
 									</div>
-									<img src="img/thumb_10.png" alt="" />
+									<img class="thumb_2_img_2_3" src="img/thumb_10.png" alt="" />
 								</a>
 								<a href="#" class="thumb_2">
 									<div>
@@ -473,7 +680,7 @@
 											<p class="more_link">Подробнее</p>
 										</div>
 									</div>
-									<img src="img/thumb_12.png" alt="" />
+									<img class="thumb_2_2_img_6" src="img/thumb_12.png" alt="" />
 								</a>
 								<a href="#" class="thumb_2">
 									<div>
@@ -589,7 +796,7 @@
 							</form>
 						</div>
 
-						<div class="inner_box">
+						<div class="inner_box inner_box_2">
 							<div class="h2_wrapp">
 								<h2>О нас</h2>
 							</div>
@@ -670,27 +877,6 @@
 							<div class="h2_wrapp">
 								<h2>Фотогаллерея и видео</h2>
 							</div>
-							<!-- <div class="video_slider rev_slider">
-								<div class="slide rev_slide">
-									<div class="video">1</div>
-									<iframe width="560" height="315" src="https://www.youtube.com/embed/U383dXPbhTA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-								</div>
-								<div class="slide rev_slide">
-									<div class="video">2</div>
-								</div>
-								<div class="slide rev_slide">
-									<div class="video">3</div>
-								</div>
-								<div class="slide rev_slide">
-									<div class="video">4</div>
-								</div>
-								<div class="slide rev_slide">
-									<div class="video">5</div>
-								</div>
-								<div class="slide rev_slide">
-									<div class="video">6</div>
-								</div>
-							</div> -->
 							<div class="video_slider_wrapp">
 								<div class="video_slider poster-main" id="carousel" data-setting='{
 									"width":1100,
@@ -702,7 +888,7 @@
 									"autoPlay":true,
 									"delay":5000,
 									"verticalAlign":"middle"
-									}'> 
+									}'>
 								   <div class="poster-btn poster-prev-btn"></div> 
 								   <ul class="poster-list"> 
 								    <li class="poster-item" data-src="https://youtu.be/4bX3LhA12Rk" data-fancybox="video-gallery"><a href="#" class="poster_link"><img src="img/video_sl_01.jpg" alt=""/></a></li>
@@ -721,58 +907,60 @@
 							<div class="h2_wrapp">
 								<h2>Отзывы</h2>
 							</div>
-							<div class="testimonial_slider">
-								<div>
-									<div class="testimonial">
-										<div class="testimonial_header">
-											<div>
-												<h3>ООО “Лидер”</h3>
+							<div class="testimonial_slider_wrapp">
+								<div class="testimonial_slider">
+									<div class="testimonial_wrapp">
+										<div class="testimonial">
+											<div class="testimonial_header">
+												<div>
+													<h3>ООО “Лидер”</h3>
+												</div>
+												<div>
+													<div class="rateit svg" data-rateit-value="4.5" data-rateit-starwidth="22" data-rateit-starheight="19" data-rateit-ispreset="true" data-rateit-readonly="true"></div>
+												</div>
 											</div>
-											<div>
-												<div class="rateit svg" data-rateit-value="4.5" data-rateit-starwidth="22" data-rateit-starheight="19" data-rateit-ispreset="true" data-rateit-readonly="true"></div>
+											<div class="testimonial_content">
+												<p>Огромное спасибо ООО "ДОКА-Сервис" за ремонт плоттера. Проблема была решена оперативно, качественно и за умеренную плату. Огромная благодарность Хисматулину Уралу! Мы благодарны за помощь и взаимопонимание и надеемся на дальнейшее сотрудничество.</p>
 											</div>
-										</div>
-										<div class="testimonial_content">
-											<p>Огромное спасибо ООО "ДОКА-Сервис" за ремонт плоттера. Проблема была решена оперативно, качественно и за умеренную плату. Огромная благодарность Хисматулину Уралу! Мы благодарны за помощь и взаимопонимание и надеемся на дальнейшее сотрудничество.</p>
-										</div>
-										<div class="testimonial_footer">
-											<p class="date">25.05.2022</p>
+											<div class="testimonial_footer">
+												<p class="date">25.05.2022</p>
+											</div>
 										</div>
 									</div>
-								</div>
-								<div>
-									<div class="testimonial">
-										<div class="testimonial_header">
-											<div>
-												<h3>Владимир Шведун</h3>
+									<div class="testimonial_wrapp">
+										<div class="testimonial">
+											<div class="testimonial_header">
+												<div>
+													<h3>Владимир Шведун</h3>
+												</div>
+												<div>
+													<div class="rateit svg" data-rateit-value="5" data-rateit-starwidth="22" data-rateit-starheight="19" data-rateit-ispreset="true" data-rateit-readonly="true"></div>
+												</div>
 											</div>
-											<div>
-												<div class="rateit svg" data-rateit-value="5" data-rateit-starwidth="22" data-rateit-starheight="19" data-rateit-ispreset="true" data-rateit-readonly="true"></div>
+											<div class="testimonial_content">
+												<p>Спасибо за грамотную консультацию по ремонту плоттера Администратора и оперативную консультацию и отправку необходимых запчастей Ваших менеджеров</p>
 											</div>
-										</div>
-										<div class="testimonial_content">
-											<p>Спасибо за грамотную консультацию по ремонту плоттера Администратора и оперативную консультацию и отправку необходимых запчастей Ваших менеджеров</p>
-										</div>
-										<div class="testimonial_footer">
-											<p class="date">25.05.2022</p>
+											<div class="testimonial_footer">
+												<p class="date">25.05.2022</p>
+											</div>
 										</div>
 									</div>
-								</div>
-								<div>
-									<div class="testimonial">
-										<div class="testimonial_header">
-											<div>
-												<h3>ООО “Лидер”</h3>
+									<div class="testimonial_wrapp">
+										<div class="testimonial">
+											<div class="testimonial_header">
+												<div>
+													<h3>ООО “Лидер”</h3>
+												</div>
+												<div>
+													<div class="rateit svg" data-rateit-value="5" data-rateit-starwidth="22" data-rateit-starheight="19" data-rateit-ispreset="true" data-rateit-readonly="true"></div>
+												</div>
 											</div>
-											<div>
-												<div class="rateit svg" data-rateit-value="5" data-rateit-starwidth="22" data-rateit-starheight="19" data-rateit-ispreset="true" data-rateit-readonly="true"></div>
+											<div class="testimonial_content">
+												<p>Огромное спасибо ООО "ДОКА-Сервис" за ремонт плоттера. Проблема была решена оперативно, качественно и за умеренную плату. Огромная благодарность Хисматулину Уралу! Мы благодарны за помощь и взаимопонимание и надеемся на дальнейшее сотрудничество.</p>
 											</div>
-										</div>
-										<div class="testimonial_content">
-											<p>Огромное спасибо ООО "ДОКА-Сервис" за ремонт плоттера. Проблема была решена оперативно, качественно и за умеренную плату. Огромная благодарность Хисматулину Уралу! Мы благодарны за помощь и взаимопонимание и надеемся на дальнейшее сотрудничество.</p>
-										</div>
-										<div class="testimonial_footer">
-											<p class="date">25.05.2022</p>
+											<div class="testimonial_footer">
+												<p class="date">25.05.2022</p>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -782,78 +970,95 @@
 				</div>
 			</div>
 		</section>
-		<!-- Section 1 - Main Page -->
+		<!-- /Section 1 - Main Page -->
 		</div>
 	<!-- /Content -->
 
 	<!-- Footer -->
-
 		<footer class="footer_section">
 			<div class="row">
 				<div class="footer_templ">
 					<div class="left_col">
 						<div class="seo_text_templ">
 							<div>
-								<div class="seo_text_title">
-									<h3>Прайс-листы</h3>
-								</div>
-								<div class="seo_list_wrapp">
-									<ul class="seo_list">
-										<li><a href="#">Бланки</a></li>
-										<li><a href="#">Блокноты</a></li>
-										<li><a href="#">Буклеты</a></li>
-										<li><a href="#">Визитки</a></li>
-										<li><a href="#">Каталоги</a></li>
-										<li><a href="#">Листовки</a></li>
-										<li><a href="#">Меню</a></li>
-										<li><a href="#">Наклейки</a></li>
-										<li><a href="#">Открытки</a></li>
-										<li><a href="#">Презентации</a></li>
-										<li><a href="#">Приглашения</a></li>
-										<li><a href="#">Этикетки</a></li>
-										<li><a href="#">Бумажные стаканы</a></li>
-										<li><a href="#">Плакаты</a></li>
-										<li><a href="#">Тейбл-тенты</a></li>
-										<li><a href="#">Календари</a></li>
-										<li><a href="#">Полиграфия для гостиниц</a></li>
-									</ul>
-								</div>
-							</div>
-							<div>
-								<div class="seo_text_title">
-									<h3>Информация</h3>
-								</div>
-								<div class="seo_list_wrapp">
-									<ul class="seo_list">
-										<li><a href="#">О типографии</a></li>
-										<li><a href="#">Оплата и доставка</a></li>
-										<li><a href="#">Переделка и возврат</a></li>
-										<li><a href="#">Требования к макету</a></li>
-										<li><a href="#">Оборудование</a></li>
-										<li><a href="#">Вопрос-ответ</a></li>
-										<li><a href="#">Политика конфиденциальности</a></li>
-										<li><a href="#">Конструктор макетов</a></li>
-										<li><a href="#">Разработка дополненной реальности</a></li>
-										<li><a href="#">Вакансии</a></li>
-										<li><a href="#">Отзывы</a></li>
-										<li><a href="#">Генератор QR-кодов</a></li>
-										<li><a href="#">Генератор штрих-кодов</a></li>
-										<li><a href="#">Пример листалки</a></li>
-										<li><a href="#">Инструкция по Photoshop</a></li>
-									</ul>
+								<div class="dr_2_wrapp">
+									<div class="seo_text_title">
+										<div class="dr_2_ttile">
+											<h3>Прайс-листы</h3>
+										</div>
+									</div>
+									<div class="dr_2">
+										<div class="seo_list_wrapp">
+											<ul class="seo_list">
+												<li><a href="#">Бланки</a></li>
+												<li><a href="#">Блокноты</a></li>
+												<li><a href="#">Буклеты</a></li>
+												<li><a href="#">Визитки</a></li>
+												<li><a href="#">Каталоги</a></li>
+												<li><a href="#">Листовки</a></li>
+												<li><a href="#">Меню</a></li>
+												<li><a href="#">Наклейки</a></li>
+												<li><a href="#">Открытки</a></li>
+												<li><a href="#">Презентации</a></li>
+												<li><a href="#">Приглашения</a></li>
+												<li><a href="#">Этикетки</a></li>
+												<li><a href="#">Бумажные стаканы</a></li>
+												<li><a href="#">Плакаты</a></li>
+												<li><a href="#">Тейбл-тенты</a></li>
+												<li><a href="#">Календари</a></li>
+												<li><a href="#">Полиграфия для гостиниц</a></li>
+											</ul>
+										</div>
+									</div>
 								</div>
 							</div>
 							<div>
-								<div class="seo_text_title">
-									<h3>Реквизиты</h3>
+								<div class="dr_2_wrapp">
+									<div class="seo_text_title">
+										<div class="dr_2_ttile">
+											<h3>Информация</h3>
+										</div>
+									</div>
+									<div class="dr_2">
+										<div class="seo_list_wrapp">
+											<ul class="seo_list">
+												<li><a href="#">О типографии</a></li>
+												<li><a href="#">Оплата и доставка</a></li>
+												<li><a href="#">Переделка и возврат</a></li>
+												<li><a href="#">Требования к макету</a></li>
+												<li><a href="#">Оборудование</a></li>
+												<li><a href="#">Вопрос-ответ</a></li>
+												<li><a href="#">Политика конфиденциальности</a></li>
+												<li><a href="#">Конструктор макетов</a></li>
+												<li><a href="#">Разработка дополненной реальности</a></li>
+												<li><a href="#">Вакансии</a></li>
+												<li><a href="#">Отзывы</a></li>
+												<li><a href="#">Генератор QR-кодов</a></li>
+												<li><a href="#">Генератор штрих-кодов</a></li>
+												<li><a href="#">Пример листалки</a></li>
+												<li><a href="#">Инструкция по Photoshop</a></li>
+											</ul>
+										</div>
+									</div>
 								</div>
-								<div class="contacts_content">
-									<p><span class="yellow">ИНН:</span> 7708254076</p>
-									<p><span class="yellow">КПП:</span> 770801001</p>
-									<h3>ОАО «АЛЬФА-БАНК»</h3>
-									<p><span class="yellow">р/с:</span> 40702810201400005360</p>
-									<p><span class="yellow">к/с:</span> 30101810200000000593</p>
-									<p><span class="yellow">БИК:</span> 044525593</p>
+							</div>
+							<div>
+								<div class="dr_2_wrapp">
+									<div class="seo_text_title">
+										<div class="dr_2_ttile">
+											<h3>Реквизиты</h3>
+										</div>
+									</div>
+									<div class="dr_2">
+										<div class="contacts_content">
+											<p><span class="yellow">ИНН:</span> 7708254076</p>
+											<p><span class="yellow">КПП:</span> 770801001</p>
+											<h3>ОАО «АЛЬФА-БАНК»</h3>
+											<p><span class="yellow">р/с:</span> 40702810201400005360</p>
+											<p><span class="yellow">к/с:</span> 30101810200000000593</p>
+											<p><span class="yellow">БИК:</span> 044525593</p>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -920,7 +1125,6 @@
 				</div>
 			</div>
 		</footer>
-
 	<!-- /Footer -->
 
 	</div>
