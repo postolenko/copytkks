@@ -3,7 +3,7 @@ d = document,
 e = d.documentElement,
 g = d.getElementsByTagName('body')[0],
 bodyWidth = w.innerWidth || e.clientWidth || g.clientWidth;
-
+var settings, videoDescSliderTempl, videoRespSliderTempl;
 function getThumbnailsSliderParams() {
   $(".thumbnails").not(".slick-initialized").slick({
     mobileFirst: true,
@@ -37,19 +37,12 @@ function getThumbnailsSliderParams() {
   });
 }
 
-$(window).load(function() {
-
-  if($(".scroll_box").length > 0) {
-    $(".scroll_box").mCustomScrollbar();
-  }
-
-  if($(".scroll_x").length > 0) {
-    $(".scroll_x").mCustomScrollbar({
-      axis:"x"
-    });
-  }
-
-  if($(".video_slider").length > 0 ) { 
+function getVideoSlider() {
+  if(bodyWidth > 767) {
+    if($("#videoSlider #videoRespSl").length > 0) {
+      $("#videoRespSl").remove();
+    }
+    $("#videoSlider").html(videoDescSliderTempl);
     Carousel.init($("#carousel"));
     $("#carousel").init();
     var myElement = document.getElementById('carousel');
@@ -62,13 +55,41 @@ $(window).load(function() {
         $(".video_slider .poster-next-btn").trigger("click");
       }
     });
+  } else {
+    if($("#videoSlider #videoDescSl").length > 0) {
+      $("#videoDescSl").remove();
+    }
+    $("#videoSlider").html(videoRespSliderTempl);
+    $(".resp_video_slider").not(".slick-initialized").slick({
+      dots: false,
+      arrows: true,
+      autoplay: false,
+      autoplaySpeed: 7000,
+      speed: 1200,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      fade: true,
+      prevArrow: '<button class="slick-prev thumb_arrow thumb_arrow_left" aria-label="Previous" type="button"><img src="img/slick_thumb_left.svg"></button>',
+      nextArrow: '<button class="slick-next thumb_arrow thumb_arrow_right" aria-label="Next" type="button"><img src="img/slick_thumb_right.svg"></button>',
+    });
   }
+}
 
+$(window).load(function() {
+  if($(".scroll_box").length > 0) {
+    $(".scroll_box").mCustomScrollbar();
+  }
+  if($(".scroll_x").length > 0) {
+    $(".scroll_x").mCustomScrollbar({
+      axis:"x"
+    });
+  }
 });
 
 $(window).resize(function() {
   bodyWidth = w.innerWidth || e.clientWidth || g.clientWidth;
   getThumbnailsSliderParams();
+  getVideoSlider();
 });
 
 $(document).scroll(function() {
@@ -77,6 +98,11 @@ $(document).scroll(function() {
 $(document).ready(function() {
   bodyWidth = w.innerWidth || e.clientWidth || g.clientWidth;
   getThumbnailsSliderParams();
+  videoDescSliderTempl = $("#videoDescSl").html();
+  videoRespSliderTempl = $("#videoRespSl").html();
+  $("#videoDescSl").remove();
+  $("#videoRespSl").remove();
+  getVideoSlider();
 
   if($("input[type = 'tel']").length > 0) {
     var im = new Inputmask("+7 - 9 9 9 - 9 9 9 - 9 9 - 9 9");
@@ -92,9 +118,6 @@ $(document).ready(function() {
         speed: 1200,
         slidesToShow: 1,
         slidesToScroll: 1,
-        // fade: true,
-        // centerPadding: '-120px',
-        // centerMode: true,
         appendArrows: $(".slider_arrows"),
         prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><img src="img/slick_left.svg"></button>',
         nextArrow: '<button class="slick-next" aria-label="Next" type="button"><img src="img/slick_right.svg"></button>'
@@ -122,60 +145,6 @@ $(document).ready(function() {
       sl.slideUp(300);
     }
   });
-
-  // ---------------
-
-// var rev = $('.rev_slider');
-// rev.on('init', function(event, slick, currentSlide) {
-//   var
-//   cur = $(slick.$slides[slick.currentSlide]),
-//   next = cur.next(),
-//   prev = cur.prev();
-//   prev.addClass('slick-sprev');
-//   next.addClass('slick-snext');
-//   cur.removeClass('slick-snext').removeClass('slick-sprev');
-//   slick.$prev = prev;
-//   slick.$next = next;
-// }).on('beforeChange', function(event, slick, currentSlide, nextSlide) {
-//   console.log('beforeChange');
-//   var
-//   cur = $(slick.$slides[nextSlide]);
-//   console.log(slick.$prev, slick.$next);
-//   slick.$prev.removeClass('slick-sprev');
-//   slick.$next.removeClass('slick-snext');
-//   next = cur.next(),
-//   prev = cur.prev();
-//   prev.prev();
-//   prev.next();
-//   prev.addClass('slick-sprev');
-//   next.addClass('slick-snext');
-//   slick.$prev = prev;
-//   slick.$next = next;
-//   cur.removeClass('slick-next').removeClass('slick-sprev');
-// });
-
-// rev.slick({
-//   speed: 1000,
-//   arrows: true,
-//   dots: false,
-//   focusOnSelect: true,
-//   prevArrow: '<button> prev</button>',
-//   nextArrow: '<button> next</button>',
-//   infinite: true,
-//   centerMode: true,
-//   slidesPerRow: 1,
-//   slidesToShow: 1,
-//   slidesToScroll: 1,
-//   centerPadding: '0',
-//   swipe: true,
-//   customPaging: function(slider, i) {
-//     return '';
-//   },
-//   /*infinite: false,*/
-// });
-
-    // ---------------
-    
   // ---------------
   $(".respmenubtn").on("click", function(e) {
     e.preventDefault();
@@ -207,169 +176,167 @@ $(document).ready(function() {
 
   // ----------
 
-if($("#counter").length > 0) {
+  if($("#counter").length > 0) {
 
-  var year = $("#counter").attr("data-startyear");
-  var month = $("#counter").attr("data-startmonth");
-  var day = $("#counter").attr("data-startday");
-  var hours = $("#counter").attr("data-starthours");
-  var minutes = $("#counter").attr("data-startminutes");
-  var seconds = $("#counter").attr("data-startseconds");
+    var year = $("#counter").attr("data-startyear");
+    var month = $("#counter").attr("data-startmonth");
+    var day = $("#counter").attr("data-startday");
+    var hours = $("#counter").attr("data-starthours");
+    var minutes = $("#counter").attr("data-startminutes");
+    var seconds = $("#counter").attr("data-startseconds");
 
-  const creationDateObj = {
-    year: year,
-    month: month,
-    day: day,
-    hours: hours,
-    minutes: minutes,
-    seconds: seconds
-  };
+    const creationDateObj = {
+      year: year,
+      month: month,
+      day: day,
+      hours: hours,
+      minutes: minutes,
+      seconds: seconds
+    };
 
-  const creationDate = new Date(
-    creationDateObj.year,
-    creationDateObj.month,
-    creationDateObj.day,
-    creationDateObj.hours,
-    creationDateObj.minutes,
-    creationDateObj.seconds
-  );
+    const creationDate = new Date(
+      creationDateObj.year,
+      creationDateObj.month,
+      creationDateObj.day,
+      creationDateObj.hours,
+      creationDateObj.minutes,
+      creationDateObj.seconds
+    );
 
-  setInterval(() => {
+    setInterval(() => {
 
-    const now = new Date();
-    const diffInMS = now - creationDate;
-    const diffAsDate = new Date(diffInMS);
+      const now = new Date();
+      const diffInMS = now - creationDate;
+      const diffAsDate = new Date(diffInMS);
 
-    const [
-      years,
-      months,
-      days,
-      hours,
-      minutes,
-      seconds
-    ] = diffAsDate
-        .toISOString()
-        .split('T')
-        .map(timePart => 
-          timePart
-            .split(/-|:|\./)
-            .map(str => +str)
-        )
-        .flat();
-     var y = years - 1970;
-     var m = months - 1;
-     var d = days - 1;
-    $("#year").text(y);
-    $("#month").text(m);
-    $("#day").text(d);
-    $("#hour").text(hours);
-    $("#minutes").text(minutes);
-    $("#second").text(seconds);
-  }, 1000);
+      const [
+        years,
+        months,
+        days,
+        hours,
+        minutes,
+        seconds
+      ] = diffAsDate
+          .toISOString()
+          .split('T')
+          .map(timePart => 
+            timePart
+              .split(/-|:|\./)
+              .map(str => +str)
+          )
+          .flat();
+       var y = years - 1970;
+       var m = months - 1;
+       var d = days - 1;
+      $("#year").text(y);
+      $("#month").text(m);
+      $("#day").text(d);
+      $("#hour").text(hours);
+      $("#minutes").text(minutes);
+      $("#second").text(seconds);
+    }, 1000);
 
-}
-
-// -----------
-
-$(".respmenubtn_2").click(function(e) {
-  e.preventDefault();
-  if( $("#resp_nav").is(":hidden") ) {
-      $("#resp_nav").fadeIn(300);
-      $(this).addClass("active");
-  } else {
-      $("#resp_nav").fadeOut(300);
-      $(this).removeClass("active");
   }
-});
-$(".close_nav").click(function(e) {
-  e.preventDefault();
-  $("#resp_nav").fadeOut(300);
-  $(".respmenubtn_2").removeClass("active");
-});
-$(this).keydown(function(eventObject){
-    if (eventObject.which == 27 &&
-        $("#resp_nav").is(":visible") &&
-        bodyWidth <= 767) {
-            $("#resp_nav").fadeOut(300);
-            $(".respmenubtn_2").removeClass("active");
-    }
-});
 
 // -----------
 
-$(".resp_link_tab").on("click", function(e) {
-  e.preventDefault();
-  tab = $(this).attr("href");
-  $(".resp_tab").removeClass("active");
-  $(".res_nav_tabs").addClass("hidden");
-  $(tab).addClass("active");
-});
+  $(".respmenubtn_2").click(function(e) {
+    e.preventDefault();
+    if( $("#resp_nav").is(":hidden") ) {
+        $("#resp_nav").fadeIn(300);
+        $(this).addClass("active");
+    } else {
+        $("#resp_nav").fadeOut(300);
+        $(this).removeClass("active");
+    }
+  });
+  $(".close_nav").click(function(e) {
+    e.preventDefault();
+    $("#resp_nav").fadeOut(300);
+    $(".respmenubtn_2").removeClass("active");
+  });
+  $(this).keydown(function(eventObject){
+      if (eventObject.which == 27 &&
+          $("#resp_nav").is(":visible") &&
+          bodyWidth <= 767) {
+              $("#resp_nav").fadeOut(300);
+              $(".respmenubtn_2").removeClass("active");
+      }
+  });
 
-$(".resp_tab_header").on("click", function(e) {
-  e.preventDefault();
-  $(".resp_tab").removeClass("active");
-  $(".res_nav_tabs").removeClass("hidden");
-});
+// -----------
+
+  $(".resp_link_tab").on("click", function(e) {
+    e.preventDefault();
+    tab = $(this).attr("href");
+    $(".resp_tab").removeClass("active");
+    $(".res_nav_tabs").addClass("hidden");
+    $(tab).addClass("active");
+  });
+
+  $(".resp_tab_header").on("click", function(e) {
+    e.preventDefault();
+    $(".resp_tab").removeClass("active");
+    $(".res_nav_tabs").removeClass("hidden");
+  });
 
 // ------------
 
-$(".testimonial_slider").not(".slick-initialized").slick({
-  dots: true,
-  arrows: false,
-  autoplay: false,
-  autoplaySpeed: 7000,
-  speed: 1200,
-  slidesToShow: 3,
-  slidesToScroll: 3,
-  prevArrow: '<button class="slick-prev thumb_arrow thumb_arrow_left" aria-label="Previous" type="button"><img src="img/slick_thumb_left.svg"></button>',
-  nextArrow: '<button class="slick-next thumb_arrow thumb_arrow_right" aria-label="Next" type="button"><img src="img/slick_thumb_right.svg"></button>',
-  responsive: [
-      {
-        breakpoint: 1350,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          arrows: true,
+  $(".testimonial_slider").not(".slick-initialized").slick({
+    dots: true,
+    arrows: false,
+    autoplay: false,
+    autoplaySpeed: 7000,
+    speed: 1200,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    prevArrow: '<button class="slick-prev thumb_arrow thumb_arrow_left" aria-label="Previous" type="button"><img src="img/slick_thumb_left.svg"></button>',
+    nextArrow: '<button class="slick-next thumb_arrow thumb_arrow_right" aria-label="Next" type="button"><img src="img/slick_thumb_right.svg"></button>',
+    responsive: [
+        {
+          breakpoint: 1350,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            arrows: true,
+          }
+        },
+        {
+          breakpoint: 1050,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 900,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
         }
-      },
-      {
-        breakpoint: 1050,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 900,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
-        }
-      },
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
-});
+      ]
+  });
 
+  $(".dr_2_ttile").on("click", function(e) {
+    e.preventDefault();
+    parent = $(this).closest(".dr_2_wrapp");
+    dr = parent.find(".dr_2");
+    if($(this).hasClass("active")) {
+      dr.slideUp(300);
+      $(this).removeClass("active");
+    } else {
+      dr.slideDown(300);
+      $(this).addClass("active");
+    }
 
-$(".dr_2_ttile").on("click", function(e) {
-  e.preventDefault();
-  parent = $(this).closest(".dr_2_wrapp");
-  dr = parent.find(".dr_2");
-  if($(this).hasClass("active")) {
-    dr.slideUp(300);
-    $(this).removeClass("active");
-  } else {
-    dr.slideDown(300);
-    $(this).addClass("active");
-  }
+  });
 
-});
-
-  
 });

@@ -875,31 +875,47 @@
 
 						<div class="inner_box">
 							<div class="h2_wrapp">
-								<h2>Фотогаллерея и видео</h2>
+								<div class="novisible_767">
+									<h2>Фотогаллерея и видео</h2>
+								</div>
+								<div class="visible_767">
+									<h2>Видео</h2>
+								</div>
 							</div>
-							<div class="video_slider_wrapp">
-								<div class="video_slider poster-main" id="carousel" data-setting='{
-									"width":1100,
-									"height":451,
-									"posterWidth":750,
-									"posterHeight":451,
-									"scale":0.9,
-									"speed":1000,
-									"autoPlay":true,
-									"delay":5000,
-									"verticalAlign":"middle"
-									}'>
-								   <div class="poster-btn poster-prev-btn"></div> 
-								   <ul class="poster-list"> 
-								    <li class="poster-item" data-src="https://youtu.be/4bX3LhA12Rk" data-fancybox="video-gallery"><a href="#" class="poster_link"><img src="img/video_sl_01.jpg" alt=""/></a></li>
-								    <li class="poster-item" data-src="https://youtu.be/4bX3LhA12Rk" data-fancybox="video-gallery"><a href="#" class="poster_link"><img src="img/video_sl_02.jpg" alt=""/></a></li>
-								    <li class="poster-item" data-src="https://youtu.be/4bX3LhA12Rk" data-fancybox="video-gallery"><a href="#" class="poster_link"><img src="img/video_sl_03.jpg" alt=""/></a></li>
-								    <li class="poster-item" data-src="https://youtu.be/4bX3LhA12Rk" data-fancybox="video-gallery"><a href="#" class="poster_link"><img src="img/video_sl_01.jpg" alt=""/></a></li>
-								    <li class="poster-item" data-src="https://youtu.be/4bX3LhA12Rk" data-fancybox="video-gallery"><a href="#" class="poster_link"><img src="img/video_sl_02.jpg" alt=""/></a></li>
-								   </ul> 
-								   <div class="poster-btn poster-next-btn"></div> 
-								 </div>
-								 <img class="youtube_shape" src="img/youtube.svg" alt="" />
+							<div id="videoSlider">
+								<div id="videoDescSl">
+									<div class="video_slider_wrapp">
+										<div class="video_slider_box">
+											<div class="video_slider poster-main" id="carousel" data-setting = '{"width":1100, "height":451,"posterWidth":750,"posterHeight":451,"scale":0.9,"speed":1000,"autoPlay":false,"delay":5000,"verticalAlign":"middle"}'>
+											   <div class="poster-btn poster-prev-btn"></div> 
+											   <ul class="poster-list"> 
+											    <li class="poster-item" data-src="https://youtu.be/4bX3LhA12Rk" data-fancybox="video-gallery"><a href="#" class="poster_link"><img src="img/video_sl_01.jpg" alt=""/></a></li>
+											    <li class="poster-item" data-src="https://youtu.be/4bX3LhA12Rk" data-fancybox="video-gallery"><a href="#" class="poster_link"><img src="img/video_sl_02.jpg" alt=""/></a></li>
+											    <li class="poster-item" data-src="https://youtu.be/4bX3LhA12Rk" data-fancybox="video-gallery"><a href="#" class="poster_link"><img src="img/video_sl_03.jpg" alt=""/></a></li>
+											    <li class="poster-item" data-src="https://youtu.be/4bX3LhA12Rk" data-fancybox="video-gallery"><a href="#" class="poster_link"><img src="img/video_sl_01.jpg" alt=""/></a></li>
+											    <li class="poster-item" data-src="https://youtu.be/4bX3LhA12Rk" data-fancybox="video-gallery"><a href="#" class="poster_link"><img src="img/video_sl_02.jpg" alt=""/></a></li>
+											   </ul> 
+											   <div class="poster-btn poster-next-btn"></div> 
+											 </div>
+											</div>
+										<img class="youtube_shape" src="img/youtube.svg" alt="" />
+									</div>
+								</div>
+								<div id="videoRespSl">
+									<div class="resp_video_slider_wrapp">
+										<div class="resp_video_slider">
+											<div class="slide">
+												<a href="#" data-fancybox="video-gallery_resp" data-src="https://youtu.be/4bX3LhA12Rk" style="background-image: url(img/video_sl_01.jpg)" class="resp_video_poster"></a>
+											</div>
+											<div class="slide">
+												<a href="#" data-fancybox="video-gallery_resp" data-src="https://youtu.be/4bX3LhA12Rk" style="background-image: url(img/video_sl_01.jpg)" class="resp_video_poster"></a>
+											</div>
+											<div class="slide">
+												<a href="#" data-fancybox="video-gallery_resp" data-src="https://youtu.be/4bX3LhA12Rk" style="background-image: url(img/video_sl_01.jpg)" class="resp_video_poster"></a>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 
