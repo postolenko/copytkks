@@ -754,11 +754,11 @@
 	/*-- Footer --*/
 
 	.footer_templ > .left_col {
-	    width: calc(100% - 180px);
+	    width: calc(100% - 200px);
 	}
 
 	.footer_templ > .right_col {
-	    width: 180px;
+	    width: 200px;
 	}
 
 	.seo_text_templ {
@@ -1277,10 +1277,12 @@
 	}
 
 	.footer_templ > .left_col {
+		width: calc(100% - 180px);
 	    padding: 3px 5px 10px 0;
 	}
 
 	.footer_templ > .right_col {
+		width: 180px;
 	    padding: 3px 0 10px 5px;
 	}
 
